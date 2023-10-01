@@ -1,1 +1,2 @@
-# mobile
+# Mobile
+A list of mobile applications
