@@ -14,6 +14,9 @@
 		DC30357D2ACF14BB001D7C99 /* HikeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC30357C2ACF14BB001D7C99 /* HikeTests.swift */; };
 		DC3035872ACF14BB001D7C99 /* HikeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3035862ACF14BB001D7C99 /* HikeUITests.swift */; };
 		DC3035892ACF14BB001D7C99 /* HikeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3035882ACF14BB001D7C99 /* HikeUITestsLaunchTests.swift */; };
+		DC3035962ACF17BD001D7C99 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3035952ACF17BD001D7C99 /* CardView.swift */; };
+		DC3035992ACF18CD001D7C99 /* CustomBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3035982ACF18CD001D7C99 /* CustomBackgroundView.swift */; };
+		DC30359C2ACF1A45001D7C99 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC30359B2ACF1A45001D7C99 /* ColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		DC3035822ACF14BB001D7C99 /* HikeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HikeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC3035862ACF14BB001D7C99 /* HikeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HikeUITests.swift; sourceTree = "<group>"; };
 		DC3035882ACF14BB001D7C99 /* HikeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HikeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DC3035952ACF17BD001D7C99 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		DC3035982ACF18CD001D7C99 /* CustomBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackgroundView.swift; sourceTree = "<group>"; };
+		DC30359B2ACF1A45001D7C99 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,8 @@
 				DC30356B2ACF14BA001D7C99 /* HikeApp.swift */,
 				DC30356D2ACF14BA001D7C99 /* ContentView.swift */,
 				DC30356F2ACF14BB001D7C99 /* Assets.xcassets */,
+				DC30359A2ACF1A23001D7C99 /* Utility */,
+				DC3035972ACF18B8001D7C99 /* Component */,
 				DC3035712ACF14BB001D7C99 /* Preview Content */,
 			);
 			path = Hike;
@@ -125,6 +133,23 @@
 				DC3035882ACF14BB001D7C99 /* HikeUITestsLaunchTests.swift */,
 			);
 			path = HikeUITests;
+			sourceTree = "<group>";
+		};
+		DC3035972ACF18B8001D7C99 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				DC3035952ACF17BD001D7C99 /* CardView.swift */,
+				DC3035982ACF18CD001D7C99 /* CustomBackgroundView.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		DC30359A2ACF1A23001D7C99 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				DC30359B2ACF1A45001D7C99 /* ColorExtension.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +283,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC30356E2ACF14BA001D7C99 /* ContentView.swift in Sources */,
+				DC3035962ACF17BD001D7C99 /* CardView.swift in Sources */,
 				DC30356C2ACF14BA001D7C99 /* HikeApp.swift in Sources */,
+				DC3035992ACF18CD001D7C99 /* CustomBackgroundView.swift in Sources */,
+				DC30359C2ACF1A45001D7C99 /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
