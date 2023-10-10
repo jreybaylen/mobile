@@ -26,8 +26,7 @@ struct CustomBackgroundView: View {
 				],
 				startPoint: .top,
 				endPoint: .bottom
-			)
-			.cornerRadius(40)
+			).cornerRadius(40)
 		}
     }
 }

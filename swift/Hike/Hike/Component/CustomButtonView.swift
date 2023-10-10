@@ -48,8 +48,7 @@ struct CustomButtonView: View {
 						endPoint: .bottom
 					)
 				)
-		}
-		.frame(
+		}.frame(
 			width: 58,
 			height: 58
 		)

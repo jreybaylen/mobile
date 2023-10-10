@@ -33,7 +33,10 @@ struct MotionAnimationView: View {
 	
     var body: some View {
 		ZStack {
-			ForEach(0...randomCircle, id: \.self) {
+			ForEach(
+				0...randomCircle,
+				id: \.self
+			) {
 				item in
 				
 				Circle()
@@ -61,13 +64,12 @@ struct MotionAnimationView: View {
 						}
 					)
 			}
-		}
-		.frame(
-			width: 256,
-			height: 256
-		)
-		.mask(Circle())
-		.drawingGroup()
+		}.mask(Circle())
+			.frame(
+				width: 256,
+				height: 256
+			)
+			.drawingGroup()
     }
 }
 

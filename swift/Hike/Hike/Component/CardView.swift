@@ -10,6 +10,7 @@ import SwiftUI
 struct CardView: View {
 	@State private var imageNumber = 1
 	@State private var randomNumber = 1
+	@State private var isShowingSheet = false
 	
 	func generateRandomNumber() {
 		repeat {
@@ -24,36 +25,49 @@ struct CardView: View {
 			CustomBackgroundView()
 			
 			VStack {
-				VStack(alignment: .leading) {
-					HStack {
-						Text("Hiking")
-							.fontWeight(.black)
-							.font(.system(size: 52))
-							.foregroundStyle(
-								LinearGradient(
-									colors: [
-										.customGrayLight,
-										.customGrayMedium
-									],
-									startPoint: .top,
-									endPoint: .bottom
-								)
-						)
-						
-						Spacer()
-						
-						Button {
-							print("The button was pressed.")
-						} label: {
-							CustomButtonView()
+				VStack(
+					alignment: .leading,
+					content: {
+						HStack {
+							Text("Hiking")
+								.fontWeight(.black)
+								.font(.system(size: 52))
+								.foregroundStyle(
+									LinearGradient(
+										colors: [
+											.customGrayLight,
+											.customGrayMedium
+										],
+										startPoint: .top,
+										endPoint: .bottom
+									)
+							)
+							
+							Spacer()
+							
+							Button {
+								isShowingSheet.toggle()
+							} label: {
+								CustomButtonView()
+							}
+							.sheet(
+								isPresented: $isShowingSheet,
+								content: {
+									SettingsView()
+										.presentationDragIndicator(.visible)
+										.presentationDetents([
+											.medium,
+											.large
+										])
+								}
+							)
 						}
+						
+						Text("Fun and enjoyable outdoor activity for friends and families.")
+							.multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
+							.italic()
 					}
-					
-					Text("Fun and enjoyable outdoor activity for friends and families.")
-						.multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
-						.italic()
-				}
-				.padding(.horizontal, 30)
+				).padding(.horizontal, 30)
 				
 				ZStack {
 				   CustomCircleView()
@@ -86,11 +100,9 @@ struct CardView: View {
 							x: 1,
 							y: 2
 						)
-				}
-				.buttonStyle(GradientButton())
+				}.buttonStyle(GradientButton())
 			}
-		}
-		.frame(
+		}.frame(
 			width: 320,
 			height: 570
 		)
