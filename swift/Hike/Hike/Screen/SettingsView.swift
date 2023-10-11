@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SettingsView: View {
+	private let previewIcons = SettingsData()
+	
     var body: some View {
 		List {
 			Section {
@@ -69,6 +71,59 @@ struct SettingsView: View {
 					.frame(maxWidth: .infinity)
 			}
 			.listRowSeparator(.hidden)
+			
+			Section(
+				content: {
+					ScrollView(
+						.horizontal,
+						showsIndicators: false,
+						content: {
+							HStack {
+								ForEach(previewIcons.appIcons.indices, id: \.self) {
+									item in
+									
+									let iconName = previewIcons.appIcons[ item ]
+									
+									Button {
+										UIApplication.shared.setAlternateIconName(iconName) {
+											error in
+											
+											if error != nil {
+												print(String(describing: error?.localizedDescription))
+											} else {
+												print("Success")
+											}
+										}
+									} label: {
+										Image("\(iconName)-Preview")
+											.resizable()
+											.scaledToFit()
+											.frame(
+												width: 80,
+												height: 80
+											)
+											.cornerRadius(16)
+									}.buttonStyle(.borderless)
+								}
+							}
+						}
+					).padding(.top, 12)
+					
+					Text("Choose your favourite app icon from the collection above")
+						.frame(
+							minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/,
+							maxWidth: .infinity
+						)
+						.multilineTextAlignment(.center)
+						.foregroundColor(.secondary)
+						.font(.footnote)
+						.padding(.bottom, 12)
+				},
+				header: {
+					Text("Alternate Icons")
+				}
+			)
+
 			
 			Section(
 				content: {

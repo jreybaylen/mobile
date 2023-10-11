@@ -8,4 +8,12 @@
 import Foundation
 
 struct SettingsData {
+	let appIcons = [
+		"AppIcon-MagnifyingGlass",
+		"AppIcon-Map",
+		"AppIcon-Mushroom",
+		"AppIcon-Camera",
+		"AppIcon-Backpack",
+		"AppIcon-Campfire"
+	]
 }
