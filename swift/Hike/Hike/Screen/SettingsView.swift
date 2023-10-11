@@ -69,6 +69,71 @@ struct SettingsView: View {
 					.frame(maxWidth: .infinity)
 			}
 			.listRowSeparator(.hidden)
+			
+			Section(
+				content: {
+					CustomListRowView(
+						rowLabel: "Application",
+						rowIcon: "apps.iphone",
+						rowContent: "Hike",
+						rowTintColor: .blue
+					)
+					
+					CustomListRowView(
+						rowLabel: "Compatibility",
+						rowIcon: "info.circle",
+						rowContent: "iOS, iPadOS",
+						rowTintColor: .red
+					)
+					
+					CustomListRowView(
+						rowLabel: "Technology",
+						rowIcon: "swift",
+						rowContent: "Swift, SwiftUI",
+						rowTintColor: .orange
+					)
+					
+					CustomListRowView(
+						rowLabel: "Version",
+						rowIcon: "gear",
+						rowContent: "v1.0.0",
+						rowTintColor: .purple
+					)
+					
+					CustomListRowView(
+						rowLabel: "Developer",
+						rowIcon: "ellipsis.curlybraces",
+						rowContent: "John Rey",
+						rowTintColor: .mint
+					)
+					
+					CustomListRowView(
+						rowLabel: "Designer",
+						rowIcon: "paintpalette",
+						rowContent: "Jrey",
+						rowTintColor: .pink
+					)
+					
+					CustomListRowView(
+						rowLabel: "Website",
+						rowIcon: "globe.asia.australia.fill",
+						rowTintColor: .indigo,
+						rowLinkLabel: "John Rey Baylen",
+						rowLinkDestination: "https://jreybaylen.vercel.app"
+					)
+				}, header: {
+					Text("About the App")
+						.fontWeight(.medium)
+				}, footer: {
+					HStack {
+						Spacer()
+						
+						Text("Copyright © All right reserved.")
+						
+						Spacer()
+					}.padding(.top, 8)
+				}
+			)
 		}
     }
 }
