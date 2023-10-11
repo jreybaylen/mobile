@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SettingsView: View {
-	private let previewIcons = SettingsData()
+	private let settings = SettingsManager()
 	
     var body: some View {
 		List {
@@ -79,10 +79,10 @@ struct SettingsView: View {
 						showsIndicators: false,
 						content: {
 							HStack {
-								ForEach(previewIcons.appIcons.indices, id: \.self) {
+								ForEach(settings.appIcons.indices, id: \.self) {
 									item in
 									
-									let iconName = previewIcons.appIcons[ item ]
+									let iconName = settings.appIcons[ item ]
 									
 									Button {
 										UIApplication.shared.setAlternateIconName(iconName) {
@@ -127,55 +127,18 @@ struct SettingsView: View {
 			
 			Section(
 				content: {
-					CustomListRowView(
-						rowLabel: "Application",
-						rowIcon: "apps.iphone",
-						rowContent: "Hike",
-						rowTintColor: .blue
-					)
-					
-					CustomListRowView(
-						rowLabel: "Compatibility",
-						rowIcon: "info.circle",
-						rowContent: "iOS, iPadOS",
-						rowTintColor: .red
-					)
-					
-					CustomListRowView(
-						rowLabel: "Technology",
-						rowIcon: "swift",
-						rowContent: "Swift, SwiftUI",
-						rowTintColor: .orange
-					)
-					
-					CustomListRowView(
-						rowLabel: "Version",
-						rowIcon: "gear",
-						rowContent: "v1.0.0",
-						rowTintColor: .purple
-					)
-					
-					CustomListRowView(
-						rowLabel: "Developer",
-						rowIcon: "ellipsis.curlybraces",
-						rowContent: "John Rey",
-						rowTintColor: .mint
-					)
-					
-					CustomListRowView(
-						rowLabel: "Designer",
-						rowIcon: "paintpalette",
-						rowContent: "Jrey",
-						rowTintColor: .pink
-					)
-					
-					CustomListRowView(
-						rowLabel: "Website",
-						rowIcon: "globe.asia.australia.fill",
-						rowTintColor: .indigo,
-						rowLinkLabel: "John Rey Baylen",
-						rowLinkDestination: "https://jreybaylen.vercel.app"
-					)
+					ForEach(settings.appDetails) {
+						item in
+						
+						CustomListRowView(
+							rowLabel: item.label,
+							rowIcon: item.icon,
+							rowContent: item.content,
+							rowTintColor: item.tintColor,
+							rowLinkLabel: item.linkLabel,
+							rowLinkDestination: item.linkDestination
+						)
+					}
 				}, header: {
 					Text("About the App")
 						.fontWeight(.medium)
