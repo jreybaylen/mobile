@@ -14,6 +14,9 @@
 		DCA43EC92AD6F51A005F059C /* WorkbookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA43EC82AD6F51A005F059C /* WorkbookTests.swift */; };
 		DCA43ED32AD6F51A005F059C /* WorkbookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA43ED22AD6F51A005F059C /* WorkbookUITests.swift */; };
 		DCA43ED52AD6F51A005F059C /* WorkbookUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA43ED42AD6F51A005F059C /* WorkbookUITestsLaunchTests.swift */; };
+		DCA43EE22AD6FD76005F059C /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = DCA43EE12AD6FD75005F059C /* Sounds */; };
+		DCA43EE92AD7006D005F059C /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA43EE82AD7006D005F059C /* OnboardingView.swift */; };
+		DCA43EEB2AD70075005F059C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA43EEA2AD70075005F059C /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,10 @@
 		DCA43ECE2AD6F51A005F059C /* WorkbookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkbookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCA43ED22AD6F51A005F059C /* WorkbookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkbookUITests.swift; sourceTree = "<group>"; };
 		DCA43ED42AD6F51A005F059C /* WorkbookUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkbookUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DCA43EE12AD6FD75005F059C /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Sounds; path = "../../../../materials/workbook-app/Resources/Sounds"; sourceTree = "<group>"; };
+		DCA43EE72AD6FFF6005F059C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		DCA43EE82AD7006D005F059C /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		DCA43EEA2AD70075005F059C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +101,13 @@
 		DCA43EB62AD6F519005F059C /* Workbook */ = {
 			isa = PBXGroup;
 			children = (
-				DCA43EB72AD6F519005F059C /* WorkbookApp.swift */,
-				DCA43EB92AD6F519005F059C /* ContentView.swift */,
+				DCA43EE72AD6FFF6005F059C /* Info.plist */,
+				DCA43EE62AD6FE8A005F059C /* Utilities */,
+				DCA43EE42AD6FE71005F059C /* Views */,
+				DCA43EE12AD6FD75005F059C /* Sounds */,
+				DCA43EE32AD6FE69005F059C /* Screens */,
 				DCA43EBB2AD6F51A005F059C /* Assets.xcassets */,
+				DCA43EB72AD6F519005F059C /* WorkbookApp.swift */,
 				DCA43EBD2AD6F51A005F059C /* Preview Content */,
 			);
 			path = Workbook;
@@ -125,6 +136,30 @@
 				DCA43ED42AD6F51A005F059C /* WorkbookUITestsLaunchTests.swift */,
 			);
 			path = WorkbookUITests;
+			sourceTree = "<group>";
+		};
+		DCA43EE32AD6FE69005F059C /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				DCA43EB92AD6F519005F059C /* ContentView.swift */,
+				DCA43EE82AD7006D005F059C /* OnboardingView.swift */,
+				DCA43EEA2AD70075005F059C /* HomeView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		DCA43EE42AD6FE71005F059C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DCA43EE62AD6FE8A005F059C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +266,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCA43EE22AD6FD76005F059C /* Sounds in Resources */,
 				DCA43EBF2AD6F51A005F059C /* Preview Assets.xcassets in Resources */,
 				DCA43EBC2AD6F51A005F059C /* Assets.xcassets in Resources */,
 			);
@@ -257,6 +293,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCA43EE92AD7006D005F059C /* OnboardingView.swift in Sources */,
+				DCA43EEB2AD70075005F059C /* HomeView.swift in Sources */,
 				DCA43EBA2AD6F519005F059C /* ContentView.swift in Sources */,
 				DCA43EB82AD6F519005F059C /* WorkbookApp.swift in Sources */,
 			);
@@ -425,11 +463,11 @@
 				DEVELOPMENT_TEAM = LL2474LCV3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Workbook/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,11 +492,11 @@
 				DEVELOPMENT_TEAM = LL2474LCV3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Workbook/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
