@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC957A9E2ADD69B10000D0C2 /* RingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC957A9D2ADD69B10000D0C2 /* RingsView.swift */; };
+		DC957AAB2ADD74B80000D0C2 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC957AAA2ADD74B80000D0C2 /* ColorExtension.swift */; };
 		DCA43EB82AD6F519005F059C /* WorkbookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA43EB72AD6F519005F059C /* WorkbookApp.swift */; };
 		DCA43EBA2AD6F519005F059C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA43EB92AD6F519005F059C /* ContentView.swift */; };
 		DCA43EBC2AD6F51A005F059C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCA43EBB2AD6F51A005F059C /* Assets.xcassets */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC957A9D2ADD69B10000D0C2 /* RingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingsView.swift; sourceTree = "<group>"; };
+		DC957AAA2ADD74B80000D0C2 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		DCA43EB42AD6F519005F059C /* Workbook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Workbook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCA43EB72AD6F519005F059C /* WorkbookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkbookApp.swift; sourceTree = "<group>"; };
 		DCA43EB92AD6F519005F059C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -151,6 +155,7 @@
 		DCA43EE42AD6FE71005F059C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DC957A9D2ADD69B10000D0C2 /* RingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -158,6 +163,7 @@
 		DCA43EE62AD6FE8A005F059C /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				DC957AAA2ADD74B80000D0C2 /* ColorExtension.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -295,6 +301,8 @@
 			files = (
 				DCA43EE92AD7006D005F059C /* OnboardingView.swift in Sources */,
 				DCA43EEB2AD70075005F059C /* HomeView.swift in Sources */,
+				DC957A9E2ADD69B10000D0C2 /* RingsView.swift in Sources */,
+				DC957AAB2ADD74B80000D0C2 /* ColorExtension.swift in Sources */,
 				DCA43EBA2AD6F519005F059C /* ContentView.swift in Sources */,
 				DCA43EB82AD6F519005F059C /* WorkbookApp.swift in Sources */,
 			);
