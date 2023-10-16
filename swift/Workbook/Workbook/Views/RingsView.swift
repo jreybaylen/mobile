@@ -8,29 +8,22 @@
 import SwiftUI
 
 struct RingsView: View {
+	@State var shapeColor: Color
+	@State var shapeOpacity: Double
+	
     var body: some View {
 		ZStack {
-			Circle()
-				.stroke(
-					.white.opacity(0.2),
-					lineWidth: 40
-				)
-				.frame(
-					width: 260,
-					height: 260,
-					alignment: .center
-				)
+			CustomCircleView(
+				shapeColor: shapeColor,
+				shapeOpacity: shapeOpacity,
+				strokeWidth: 40
+			)
 			
-			Circle()
-				.stroke(
-					.white.opacity(0.2),
-					lineWidth: 80
-				)
-				.frame(
-					width: 260,
-					height: 260,
-					alignment: .center
-				)
+			CustomCircleView(
+				shapeColor: shapeColor,
+				shapeOpacity: shapeOpacity,
+				strokeWidth: 80
+			)
 		}
     }
 }
@@ -40,6 +33,9 @@ struct RingsView: View {
 		Color.customBlue
 			.ignoresSafeArea()
 		
-		RingsView()
+		RingsView(
+			shapeColor: .white,
+			shapeOpacity: 0.2
+		)
 	}
 }

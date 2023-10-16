@@ -31,7 +31,10 @@ struct OnboardingView: View {
 					.padding(.horizontal, 50)
 				
 				ZStack {
-					RingsView()
+					RingsView(
+						shapeColor: .white,
+						shapeOpacity: 0.2
+					)
 					
 					Image("character-1")
 					 .resizable()
