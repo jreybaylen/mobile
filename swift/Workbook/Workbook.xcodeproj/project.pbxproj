@@ -11,6 +11,8 @@
 		DC957AAB2ADD74B80000D0C2 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC957AAA2ADD74B80000D0C2 /* ColorExtension.swift */; };
 		DC957AAD2ADD82560000D0C2 /* CustomCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC957AAC2ADD82560000D0C2 /* CustomCircleView.swift */; };
 		DC957AB02ADD971B0000D0C2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC957AAF2ADD971B0000D0C2 /* Constants.swift */; };
+		DC957AB22ADDB8380000D0C2 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC957AB12ADDB8380000D0C2 /* AudioPlayer.swift */; };
+		DC957AB32ADDBFBC0000D0C2 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = DCA43EE12AD6FD75005F059C /* Sounds */; };
 		DCA43EB82AD6F519005F059C /* WorkbookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA43EB72AD6F519005F059C /* WorkbookApp.swift */; };
 		DCA43EBA2AD6F519005F059C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA43EB92AD6F519005F059C /* ContentView.swift */; };
 		DCA43EBC2AD6F51A005F059C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCA43EBB2AD6F51A005F059C /* Assets.xcassets */; };
@@ -18,7 +20,6 @@
 		DCA43EC92AD6F51A005F059C /* WorkbookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA43EC82AD6F51A005F059C /* WorkbookTests.swift */; };
 		DCA43ED32AD6F51A005F059C /* WorkbookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA43ED22AD6F51A005F059C /* WorkbookUITests.swift */; };
 		DCA43ED52AD6F51A005F059C /* WorkbookUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA43ED42AD6F51A005F059C /* WorkbookUITestsLaunchTests.swift */; };
-		DCA43EE22AD6FD76005F059C /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = DCA43EE12AD6FD75005F059C /* Sounds */; };
 		DCA43EE92AD7006D005F059C /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA43EE82AD7006D005F059C /* OnboardingView.swift */; };
 		DCA43EEB2AD70075005F059C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA43EEA2AD70075005F059C /* HomeView.swift */; };
 /* End PBXBuildFile section */
@@ -45,6 +46,7 @@
 		DC957AAA2ADD74B80000D0C2 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		DC957AAC2ADD82560000D0C2 /* CustomCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCircleView.swift; sourceTree = "<group>"; };
 		DC957AAF2ADD971B0000D0C2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DC957AB12ADDB8380000D0C2 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		DCA43EB42AD6F519005F059C /* Workbook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Workbook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCA43EB72AD6F519005F059C /* WorkbookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkbookApp.swift; sourceTree = "<group>"; };
 		DCA43EB92AD6F519005F059C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				DC957AAA2ADD74B80000D0C2 /* ColorExtension.swift */,
+				DC957AB12ADDB8380000D0C2 /* AudioPlayer.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -286,7 +289,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCA43EE22AD6FD76005F059C /* Sounds in Resources */,
+				DC957AB32ADDBFBC0000D0C2 /* Sounds in Resources */,
 				DCA43EBF2AD6F51A005F059C /* Preview Assets.xcassets in Resources */,
 				DCA43EBC2AD6F51A005F059C /* Assets.xcassets in Resources */,
 			);
@@ -315,6 +318,7 @@
 			files = (
 				DCA43EE92AD7006D005F059C /* OnboardingView.swift in Sources */,
 				DCA43EEB2AD70075005F059C /* HomeView.swift in Sources */,
+				DC957AB22ADDB8380000D0C2 /* AudioPlayer.swift in Sources */,
 				DC957A9E2ADD69B10000D0C2 /* RingsView.swift in Sources */,
 				DC957AAD2ADD82560000D0C2 /* CustomCircleView.swift in Sources */,
 				DC957AAB2ADD74B80000D0C2 /* ColorExtension.swift in Sources */,

@@ -190,6 +190,7 @@ struct OnboardingView: View {
 												buttonOffset = buttonWidth - BUTTON_OFFSET
 												
 												DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+													playSound(sound: "chimeup", type: "mp3")
 													isOnboardingView.toggle()
 												}
 											} else {
@@ -215,9 +216,10 @@ struct OnboardingView: View {
 				
 				Spacer()
 			}
-		}.onAppear(perform: {
-			isAnimating.toggle()
-		})
+		}.preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
+			.onAppear(perform: {
+				isAnimating.toggle()
+			})
 	}
 }
 
