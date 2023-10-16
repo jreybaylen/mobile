@@ -10,6 +10,7 @@
 		DC957A9E2ADD69B10000D0C2 /* RingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC957A9D2ADD69B10000D0C2 /* RingsView.swift */; };
 		DC957AAB2ADD74B80000D0C2 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC957AAA2ADD74B80000D0C2 /* ColorExtension.swift */; };
 		DC957AAD2ADD82560000D0C2 /* CustomCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC957AAC2ADD82560000D0C2 /* CustomCircleView.swift */; };
+		DC957AB02ADD971B0000D0C2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC957AAF2ADD971B0000D0C2 /* Constants.swift */; };
 		DCA43EB82AD6F519005F059C /* WorkbookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA43EB72AD6F519005F059C /* WorkbookApp.swift */; };
 		DCA43EBA2AD6F519005F059C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA43EB92AD6F519005F059C /* ContentView.swift */; };
 		DCA43EBC2AD6F51A005F059C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCA43EBB2AD6F51A005F059C /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 		DC957A9D2ADD69B10000D0C2 /* RingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingsView.swift; sourceTree = "<group>"; };
 		DC957AAA2ADD74B80000D0C2 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		DC957AAC2ADD82560000D0C2 /* CustomCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCircleView.swift; sourceTree = "<group>"; };
+		DC957AAF2ADD971B0000D0C2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DCA43EB42AD6F519005F059C /* Workbook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Workbook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCA43EB72AD6F519005F059C /* WorkbookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkbookApp.swift; sourceTree = "<group>"; };
 		DCA43EB92AD6F519005F059C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -84,6 +86,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC957AAE2ADD970B0000D0C2 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				DC957AAF2ADD971B0000D0C2 /* Constants.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		DCA43EAB2AD6F519005F059C = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +117,7 @@
 		DCA43EB62AD6F519005F059C /* Workbook */ = {
 			isa = PBXGroup;
 			children = (
+				DC957AAE2ADD970B0000D0C2 /* Data */,
 				DCA43EE72AD6FFF6005F059C /* Info.plist */,
 				DCA43EE62AD6FE8A005F059C /* Utilities */,
 				DCA43EE42AD6FE71005F059C /* Views */,
@@ -309,6 +320,7 @@
 				DC957AAB2ADD74B80000D0C2 /* ColorExtension.swift in Sources */,
 				DCA43EBA2AD6F519005F059C /* ContentView.swift in Sources */,
 				DCA43EB82AD6F519005F059C /* WorkbookApp.swift in Sources */,
+				DC957AB02ADD971B0000D0C2 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

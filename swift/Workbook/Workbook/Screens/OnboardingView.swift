@@ -8,7 +8,24 @@
 import SwiftUI
 
 struct OnboardingView: View {
-	@AppStorage("onboarding") var isOnboardingView: Bool = true
+	@AppStorage("onboarding") private var isOnboardingView: Bool = true
+	
+	@State private var isAnimating = false
+	@State private var buttonOffset: CGFloat = 0
+	@State private var buttonWidth = UIScreen.main.bounds.width - BUTTON_OFFSET
+	
+	private var isHomeView: Binding<Bool> {
+		Binding(
+			get: {
+				self.buttonOffset > self.buttonWidth / 2
+			},
+			set: {
+				result in
+				
+				self.isOnboardingView = result
+			}
+		)
+	}
 	
     var body: some View {
 		ZStack {
@@ -18,17 +35,24 @@ struct OnboardingView: View {
 			VStack {
 				Spacer()
 				
-				Text("Share.")
-					.font(.system(size: 60))
-					.fontWeight(.heavy)
-					.foregroundStyle(.white)
-				
-				Text("It's not how much we give but how much lvoe we put into giving.")
-					.fontWeight(.light)
-					.font(.title3)
-					.foregroundStyle(.white)
-					.multilineTextAlignment(.center)
-					.padding(.horizontal, 50)
+				VStack {
+					Text("Share.")
+						.font(.system(size: 60))
+						.fontWeight(.heavy)
+						.foregroundStyle(.white)
+					
+					Text("It's not how much we give but how much lvoe we put into giving.")
+						.fontWeight(.light)
+						.font(.title3)
+						.foregroundStyle(.white)
+						.multilineTextAlignment(.center)
+						.padding(.horizontal, 50)
+				}.opacity(isAnimating ? 1 : 0)
+					.offset(y: isAnimating ? 0 : -40)
+					.animation(
+						.easeOut(duration: 1),
+						value: isAnimating
+					)
 				
 				ZStack {
 					RingsView(
@@ -61,7 +85,7 @@ struct OnboardingView: View {
 					HStack {
 						Capsule()
 							.fill(Color.customRed)
-							.frame(width: 80)
+							.frame(width: buttonOffset + 72)
 						
 						Spacer()
 					}
@@ -80,26 +104,51 @@ struct OnboardingView: View {
 									size: 24,
 									weight: .bold
 								))
-						}.onTapGesture {
-							isOnboardingView.toggle()
 						}.foregroundStyle(.white)
+							.offset(x: buttonOffset)
 							.frame(
 								width: 80,
 								height: 80,
 								alignment: .center
+							).onTapGesture {
+								isOnboardingView.toggle()
+							}.gesture(
+								DragGesture()
+									.onChanged {
+										gesture in
+										
+										let gestureWidth = gesture.translation.width
+										
+										if (gestureWidth > 0) && (buttonOffset <= (buttonWidth - BUTTON_OFFSET)) {
+											buttonOffset = gestureWidth
+										}
+									}
+									.onEnded {
+										_ in
+										
+										if isHomeView.wrappedValue {
+											buttonOffset = buttonWidth - BUTTON_OFFSET
+											isOnboardingView.toggle()
+										}
+										
+										buttonOffset = 0
+									}
 							)
 						
 						Spacer()
 					}
 				}.frame(
+					width: buttonWidth,
 					height: 80,
-				   alignment: .center
+					alignment: .center
 			   ).padding()
 				
 				Spacer()
 			}
+		}.onAppear {
+			isAnimating.toggle()
 		}
-    }
+	}
 }
 
 #Preview {
