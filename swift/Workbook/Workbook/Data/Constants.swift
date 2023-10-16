@@ -8,3 +8,6 @@
 import Foundation
 
 let BUTTON_OFFSET: CGFloat = 80
+
+let IMAGE_OFFSET: Double = 1.2
+let IMAGE_MAX_RANGE: CGFloat = 150

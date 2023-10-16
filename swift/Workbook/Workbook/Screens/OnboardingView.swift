@@ -13,6 +13,9 @@ struct OnboardingView: View {
 	@State private var isAnimating = false
 	@State private var buttonOffset: CGFloat = 0
 	@State private var buttonWidth = UIScreen.main.bounds.width - BUTTON_OFFSET
+	@State private var imageOffset: CGSize = .zero
+	@State private var indicatorOpacity: Double = 1
+	@State private var title = "Share."
 	
 	private var isHomeView: Binding<Bool> {
 		Binding(
@@ -36,10 +39,11 @@ struct OnboardingView: View {
 				Spacer()
 				
 				VStack {
-					Text("Share.")
+					Text(title)
 						.font(.system(size: 60))
 						.fontWeight(.heavy)
 						.foregroundStyle(.white)
+						.transition(.opacity)
 					
 					Text("It's not how much we give but how much lvoe we put into giving.")
 						.fontWeight(.light)
@@ -58,7 +62,12 @@ struct OnboardingView: View {
 					RingsView(
 						shapeColor: .white,
 						shapeOpacity: 0.2
-					)
+					).offset(x: imageOffset.width * -1)
+						.blur(radius: abs(imageOffset.width / 5))
+						.animation(
+							.easeOut(duration: 1),
+							value: imageOffset
+						)
 					
 					Image("character-1")
 						.resizable()
@@ -68,8 +77,52 @@ struct OnboardingView: View {
 							.easeOut(duration: 1),
 							value: isAnimating
 						)
-					
-				}
+						.offset(x: imageOffset.width * IMAGE_OFFSET, y: 0)
+						.rotationEffect(.degrees(Double(imageOffset.width / 20)))
+						.gesture(
+							DragGesture()
+								.onChanged {
+									gesture in
+									
+									if abs(imageOffset.width) <= IMAGE_MAX_RANGE {
+										imageOffset = gesture.translation
+										
+										withAnimation(.linear(duration: 0.25)) {
+											indicatorOpacity = 0
+											title = "Give."
+										}
+									}
+								}
+								.onEnded {
+									_ in
+									
+									imageOffset = .zero
+									
+									withAnimation(.linear(duration: 0.25)) {
+										indicatorOpacity = 1
+										title = "Share."
+									}
+								}
+						)
+						.animation(
+							.easeOut(duration: 1),
+							value: imageOffset
+						)
+				}.overlay(
+					Image(systemName: "arrow.left.and.right.circle")
+						.foregroundStyle(.white)
+						.font(.system(
+							size: 44,
+							weight: .ultraLight
+						))
+						.opacity(isAnimating ? 1 : 0)
+						.animation(
+							.easeIn(duration: 1).delay(2),
+							value: isAnimating
+						)
+						.opacity(indicatorOpacity),
+					alignment: .bottom
+				)
 				
 				ZStack {
 					Capsule()
