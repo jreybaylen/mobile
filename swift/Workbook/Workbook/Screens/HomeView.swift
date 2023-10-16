@@ -10,6 +10,8 @@ import SwiftUI
 struct HomeView: View {
 	@AppStorage("onboarding") var isOnboardingView: Bool = false
 	
+	@State var isAnimating = false
+	
     var body: some View {
 		VStack {
 			Spacer()
@@ -24,6 +26,12 @@ struct HomeView: View {
 					 .resizable()
 					 .scaledToFit()
 					 .padding()
+					 .offset(y: isAnimating ? 35 : -50)
+					 .animation(
+						.easeInOut(duration: 4)
+						.repeatForever(),
+						value: isAnimating
+					 )
 			}
 			
 			Text("The time that leads to mastery is dependent on the intesity of our focus.")
@@ -50,7 +58,17 @@ struct HomeView: View {
 			}.buttonStyle(.borderedProminent)
 				.buttonBorderShape(.capsule)
 				.controlSize(.large)
-		}
+			
+			Spacer()
+		}.opacity(isAnimating ? 1 : 0)
+			.offset(y: isAnimating ? 0 : 40)
+			.animation(
+				.easeOut(duration: 2),
+				value: isAnimating
+			)
+			.onAppear(perform: {
+				isAnimating.toggle()
+			})
     }
 }
 

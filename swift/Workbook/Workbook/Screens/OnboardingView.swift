@@ -17,7 +17,7 @@ struct OnboardingView: View {
 	private var isHomeView: Binding<Bool> {
 		Binding(
 			get: {
-				self.buttonOffset > self.buttonWidth / 2
+				self.buttonOffset > (self.buttonWidth / 2)
 			},
 			set: {
 				result in
@@ -61,8 +61,14 @@ struct OnboardingView: View {
 					)
 					
 					Image("character-1")
-					 .resizable()
-					 .scaledToFit()
+						.resizable()
+						.scaledToFit()
+						.opacity(isAnimating ? 1 : 0)
+						.animation(
+							.easeOut(duration: 1),
+							value: isAnimating
+						)
+					
 				}
 				
 				ZStack {
@@ -126,12 +132,17 @@ struct OnboardingView: View {
 									.onEnded {
 										_ in
 										
-										if isHomeView.wrappedValue {
-											buttonOffset = buttonWidth - BUTTON_OFFSET
-											isOnboardingView.toggle()
+										withAnimation(Animation.easeOut(duration: 0.5)) {
+											if isHomeView.wrappedValue {
+												buttonOffset = buttonWidth - BUTTON_OFFSET
+												
+												DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+													isOnboardingView.toggle()
+												}
+											} else {
+												buttonOffset = 0
+											}
 										}
-										
-										buttonOffset = 0
 									}
 							)
 						
@@ -142,12 +153,18 @@ struct OnboardingView: View {
 					height: 80,
 					alignment: .center
 			   ).padding()
+					.opacity(isAnimating ? 1 : 0)
+					.offset(y: isAnimating ? 0 : 40)
+					.animation(
+						.easeOut(duration: 1),
+						value: isAnimating
+					)
 				
 				Spacer()
 			}
-		}.onAppear {
+		}.onAppear(perform: {
 			isAnimating.toggle()
-		}
+		})
 	}
 }
 
