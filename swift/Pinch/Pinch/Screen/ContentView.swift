@@ -83,6 +83,51 @@ struct ContentView: View {
 							.padding(.top, 30)
 					}
 				)
+				.overlay(
+					alignment: .bottom,
+					content: {
+						Group {
+							HStack {
+								Button {
+									withAnimation(.spring()) {
+										if scaleEffect > 1 {
+											scaleEffect -= 1
+											
+											if scaleEffect <= 1 {
+												resetImageScaleAndGestureEffect()
+											}
+										}
+									}
+								} label: {
+									ControlImageView(icon: "minus.magnifyingglass")
+								}
+								
+								Button {
+									resetImageScaleAndGestureEffect()
+								} label: {
+									ControlImageView(icon: "arrow.up.left.and.down.right.magnifyingglass")
+								}
+								
+								Button {
+									withAnimation(.spring()) {
+										if scaleEffect > 1 {
+											scaleEffect += 1
+											
+											if scaleEffect > 5 {
+												scaleEffect = 5
+											}
+										}
+									}
+								} label: {
+									ControlImageView(icon: "plus.magnifyingglass")
+								}
+							}.padding(EdgeInsets(top: 12, leading: 20, bottom: 12, trailing: 20))
+								.background(.ultraThinMaterial)
+								.cornerRadius(12)
+								.opacity(isAnimating ? 1 : 0)
+						}.padding(.bottom, 30)
+					}
+				)
 		}
     }
 }

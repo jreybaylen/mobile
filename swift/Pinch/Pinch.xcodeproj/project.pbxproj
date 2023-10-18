@@ -15,6 +15,7 @@
 		DC14DF162ADE568E005EF7EF /* PinchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC14DF152ADE568E005EF7EF /* PinchUITests.swift */; };
 		DC14DF182ADE568E005EF7EF /* PinchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC14DF172ADE568E005EF7EF /* PinchUITestsLaunchTests.swift */; };
 		DC98017F2AE027E700627417 /* InfoPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC98017E2AE027E600627417 /* InfoPanelView.swift */; };
+		DC9801812AE051F500627417 /* ControlImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9801802AE051F500627417 /* ControlImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		DC14DF152ADE568E005EF7EF /* PinchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchUITests.swift; sourceTree = "<group>"; };
 		DC14DF172ADE568E005EF7EF /* PinchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DC98017E2AE027E600627417 /* InfoPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPanelView.swift; sourceTree = "<group>"; };
+		DC9801802AE051F500627417 /* ControlImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				DC98017E2AE027E600627417 /* InfoPanelView.swift */,
+				DC9801802AE051F500627417 /* ControlImageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC9801812AE051F500627417 /* ControlImageView.swift in Sources */,
 				DC14DEFD2ADE568D005EF7EF /* ContentView.swift in Sources */,
 				DC14DEFB2ADE568D005EF7EF /* PinchApp.swift in Sources */,
 				DC98017F2AE027E700627417 /* InfoPanelView.swift in Sources */,
