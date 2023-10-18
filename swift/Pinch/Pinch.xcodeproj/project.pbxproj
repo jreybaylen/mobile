@@ -14,6 +14,7 @@
 		DC14DF0C2ADE568E005EF7EF /* PinchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC14DF0B2ADE568E005EF7EF /* PinchTests.swift */; };
 		DC14DF162ADE568E005EF7EF /* PinchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC14DF152ADE568E005EF7EF /* PinchUITests.swift */; };
 		DC14DF182ADE568E005EF7EF /* PinchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC14DF172ADE568E005EF7EF /* PinchUITestsLaunchTests.swift */; };
+		DC98017F2AE027E700627417 /* InfoPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC98017E2AE027E600627417 /* InfoPanelView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		DC14DF112ADE568E005EF7EF /* PinchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PinchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC14DF152ADE568E005EF7EF /* PinchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchUITests.swift; sourceTree = "<group>"; };
 		DC14DF172ADE568E005EF7EF /* PinchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DC98017E2AE027E600627417 /* InfoPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPanelView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				DC14DEFA2ADE568D005EF7EF /* PinchApp.swift */,
+				DC98017D2AE027D400627417 /* View */,
 				DC98017C2AE007EF00627417 /* Screen */,
 				DC14DEFE2ADE568E005EF7EF /* Assets.xcassets */,
 				DC14DF002ADE568E005EF7EF /* Preview Content */,
@@ -133,6 +136,14 @@
 				DC14DEFC2ADE568D005EF7EF /* ContentView.swift */,
 			);
 			path = Screen;
+			sourceTree = "<group>";
+		};
+		DC98017D2AE027D400627417 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DC98017E2AE027E600627417 /* InfoPanelView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +278,7 @@
 			files = (
 				DC14DEFD2ADE568D005EF7EF /* ContentView.swift in Sources */,
 				DC14DEFB2ADE568D005EF7EF /* PinchApp.swift in Sources */,
+				DC98017F2AE027E700627417 /* InfoPanelView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

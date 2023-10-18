@@ -22,6 +22,8 @@ struct ContentView: View {
     var body: some View {
 		NavigationView{
 			ZStack {
+				Color.clear
+				
 				Image("magazine-front-cover")
 					.resizable()
 					.aspectRatio(contentMode: .fit)
@@ -73,10 +75,19 @@ struct ContentView: View {
 						isAnimating.toggle()
 					}
 				})
+				.overlay(
+					alignment: .top,
+					content: {
+						InfoPanelView(scale: scaleEffect, offset: gestureEffect)
+							.padding(.horizontal)
+							.padding(.top, 30)
+					}
+				)
 		}
     }
 }
 
 #Preview {
     ContentView()
+		.preferredColorScheme(/*@START_MENU_TOKEN@*/.dark/*@END_MENU_TOKEN@*/)
 }
