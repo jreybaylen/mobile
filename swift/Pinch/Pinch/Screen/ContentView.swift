@@ -9,13 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
 	@State private var isAnimating = false
-	@State private var scaleEffect: CGFloat = 1
-	@State private var gestureEffect: CGSize = .zero
+	@State private var imageScale: CGFloat = 1
+	@State private var imageOffset: CGSize = .zero
 	
-	func resetImageScaleAndGestureEffect() {
+	func resetImageScaleAndEffect() {
 		return withAnimation(.spring()) {
-			scaleEffect = 1
-			gestureEffect = .zero
+			imageScale = 1
+			imageOffset = .zero
 		}
 	}
 	
@@ -36,19 +36,19 @@ struct ContentView: View {
 						y: 2
 					)
 					.opacity(isAnimating ? 1 : 0)
-					.scaleEffect(scaleEffect)
-					.offset(x: gestureEffect.width, y: gestureEffect.height)
+					.scaleEffect(imageScale)
+					.offset(x: imageOffset.width, y: imageOffset.height)
 					.onTapGesture(count: 2, perform: {
 						withAnimation(.spring()) {
-							if scaleEffect == 1 {
+							if imageScale == 1 {
 								withAnimation(.spring()) {
-									scaleEffect = 5
+									imageScale = 5
 								}
 								
 								return
 							}
 							
-							resetImageScaleAndGestureEffect()
+							resetImageScaleAndEffect()
 						}
 					})
 					.gesture(
@@ -57,14 +57,45 @@ struct ContentView: View {
 								value in
 								
 								withAnimation(.linear(duration: 1)) {
-									gestureEffect = value.translation
+									imageOffset = value.translation
 								}
 							}
 							.onEnded {
 								_ in
 								
-								if scaleEffect == 1 {
-									resetImageScaleAndGestureEffect()
+								if imageScale == 1 {
+									resetImageScaleAndEffect()
+								}
+							}
+					)
+					.gesture(
+						MagnificationGesture()
+							.onChanged {
+								value in
+								
+								withAnimation(.linear(duration: 1)) {
+									if imageScale >= 1 && imageScale <= 5 {
+										imageScale = value
+									}
+									
+									if imageScale > 5 {
+										imageScale = 5
+									}
+									
+									if imageScale <= 1 {
+										resetImageScaleAndEffect()
+									}
+								}
+							}
+							.onEnded {
+								_ in
+								
+								if imageScale > 5 {
+									imageScale = 5
+								}
+								
+								if imageScale <= 1 {
+									resetImageScaleAndEffect()
 								}
 							}
 					)
@@ -78,7 +109,7 @@ struct ContentView: View {
 				.overlay(
 					alignment: .top,
 					content: {
-						InfoPanelView(scale: scaleEffect, offset: gestureEffect)
+						InfoPanelView(scale: imageScale, offset: imageOffset)
 							.padding(.horizontal)
 							.padding(.top, 30)
 					}
@@ -90,11 +121,11 @@ struct ContentView: View {
 							HStack {
 								Button {
 									withAnimation(.spring()) {
-										if scaleEffect > 1 {
-											scaleEffect -= 1
+										if imageScale > 1 {
+											imageScale -= 1
 											
-											if scaleEffect <= 1 {
-												resetImageScaleAndGestureEffect()
+											if imageScale <= 1 {
+												resetImageScaleAndEffect()
 											}
 										}
 									}
@@ -103,18 +134,18 @@ struct ContentView: View {
 								}
 								
 								Button {
-									resetImageScaleAndGestureEffect()
+									resetImageScaleAndEffect()
 								} label: {
 									ControlImageView(icon: "arrow.up.left.and.down.right.magnifyingglass")
 								}
 								
 								Button {
 									withAnimation(.spring()) {
-										if scaleEffect > 1 {
-											scaleEffect += 1
+										if imageScale > 1 {
+											imageScale += 1
 											
-											if scaleEffect > 5 {
-												scaleEffect = 5
+											if imageScale > 5 {
+												imageScale = 5
 											}
 										}
 									}
