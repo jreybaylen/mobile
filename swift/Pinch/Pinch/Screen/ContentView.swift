@@ -11,6 +11,8 @@ struct ContentView: View {
 	@State private var isAnimating = false
 	@State private var imageScale: CGFloat = 1
 	@State private var imageOffset: CGSize = .zero
+	@State private var isDrawerOpen = false
+	@State private var drawerIcon = "chevron.compact.left"
 	
 	func resetImageScaleAndEffect() {
 		return withAnimation(.spring()) {
@@ -158,6 +160,32 @@ struct ContentView: View {
 								.opacity(isAnimating ? 1 : 0)
 						}.padding(.bottom, 30)
 					}
+				)
+				.overlay(
+					HStack(spacing: 12) {
+						Image(systemName: drawerIcon)
+							.resizable()
+							.scaledToFit()
+							.frame(height: 40)
+							.padding()
+							.foregroundStyle(.secondary)
+							.onTapGesture(perform: {
+								drawerIcon = "chevron.compact.\(isDrawerOpen ? "left" : "right")"
+								
+								withAnimation(.easeOut(duration: 0.3)) {
+									isDrawerOpen.toggle()
+								}
+							})
+						
+						Spacer()
+					}.padding(EdgeInsets(top: 16, leading: 8, bottom: 16, trailing: 8))
+						.background(.ultraThinMaterial)
+						.cornerRadius(12)
+						.opacity(isAnimating ? 1 : 0)
+						.frame(width: 260)
+						.padding(.top, UIScreen.main.bounds.height / 12)
+						.offset(x: isDrawerOpen ? 10 : 205),
+					alignment: .topTrailing
 				)
 		}
     }
