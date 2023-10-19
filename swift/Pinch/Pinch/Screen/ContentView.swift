@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+	private let pages: [PageManager] = pagesData
+	
+	@State private var pageIndex = 0
 	@State private var isAnimating = false
 	@State private var imageScale: CGFloat = 1
 	@State private var imageOffset: CGSize = .zero
@@ -21,12 +24,16 @@ struct ContentView: View {
 		}
 	}
 	
+	func currentPage() -> String {
+		return pages[ pageIndex ].imageName
+	}
+	
     var body: some View {
 		NavigationView{
 			ZStack {
 				Color.clear
 				
-				Image("magazine-front-cover")
+				Image(currentPage())
 					.resizable()
 					.aspectRatio(contentMode: .fit)
 					.cornerRadius(10)
@@ -156,18 +163,18 @@ struct ContentView: View {
 								}
 							}.padding(EdgeInsets(top: 12, leading: 20, bottom: 12, trailing: 20))
 								.background(.ultraThinMaterial)
-								.cornerRadius(12)
+								.cornerRadius(8)
 								.opacity(isAnimating ? 1 : 0)
 						}.padding(.bottom, 30)
 					}
 				)
 				.overlay(
-					HStack(spacing: 12) {
+					HStack(spacing: 15) {
 						Image(systemName: drawerIcon)
 							.resizable()
 							.scaledToFit()
 							.frame(height: 40)
-							.padding()
+							.padding(EdgeInsets(top: 0, leading: 15, bottom: 0, trailing: 6))
 							.foregroundStyle(.secondary)
 							.onTapGesture(perform: {
 								drawerIcon = "chevron.compact.\(isDrawerOpen ? "left" : "right")"
@@ -177,14 +184,33 @@ struct ContentView: View {
 								}
 							})
 						
+						ForEach(pages) {
+							page in
+							
+							Image(page.thumbName)
+								.resizable()
+								.scaledToFit()
+								.cornerRadius(8)
+								.shadow(radius: 4)
+								.opacity(isDrawerOpen ? 1 : 0)
+								.animation(
+									.easeOut(duration: 0.5),
+									value: isDrawerOpen
+								)
+								.onTapGesture(perform: {
+									isAnimating = true
+									pageIndex = page.id
+								})
+						}
+						
 						Spacer()
 					}.padding(EdgeInsets(top: 16, leading: 8, bottom: 16, trailing: 8))
 						.background(.ultraThinMaterial)
-						.cornerRadius(12)
+						.cornerRadius(8)
 						.opacity(isAnimating ? 1 : 0)
-						.frame(width: 260)
+						.frame(width: 280)
 						.padding(.top, UIScreen.main.bounds.height / 12)
-						.offset(x: isDrawerOpen ? 10 : 205),
+						.offset(x: isDrawerOpen ? 5 : 225),
 					alignment: .topTrailing
 				)
 		}
