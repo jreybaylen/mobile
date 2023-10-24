@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct OnboardingScreen: View {
-	private let fruitsData: [ Fruit ] = fruits.shuffled()
+	private let fruits: [ Fruit ] = fruitsData.shuffled()
 	
     var body: some View {
 		TabView(content: {
 			ForEach(0..<5) {
 				fruitIndex in
 				
-				OnboardingFruitView(fruit: fruitsData[ fruitIndex ])
+				OnboardingFruitView(fruit: fruits[ fruitIndex ])
 			}
 		}).tabViewStyle(PageTabViewStyle())
     }

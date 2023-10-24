@@ -10,29 +10,12 @@ import SwiftUI
 struct OnboardingFruitView: View {
 	let fruit: Fruit
 	
-	@State var isAnimatingImage = false
-	
     var body: some View {
 		ZStack {
 			VStack(
 				spacing: 16,
 				content: {
-					Image(fruit.image)
-						.resizable()
-						.scaledToFit()
-						.padding()
-						.shadow(
-							color: Color(
-								red: 0,
-								green: 0,
-								blue: 0,
-								opacity: 0.15
-							),
-							radius: 8,
-							x: 6,
-							y: 8
-						)
-						.scaleEffect(isAnimatingImage ? 1.0 : 0.6)
+					FruitImageView(fruitImage: fruit.image)
 					
 					Text(fruit.title)
 						.font(.system(
@@ -60,27 +43,7 @@ struct OnboardingFruitView: View {
 						.multilineTextAlignment(.center)
 						.padding(.bottom)
 					
-					Button(
-						action: {
-						
-						},
-						label: {
-							Text("Start".uppercased())
-							
-							Spacer()
-							
-							Image(systemName: "arrow.right.circle")
-						}
-					).foregroundStyle(.white)
-						.font(.subheadline)
-						.fontWeight(.bold)
-						.padding(.vertical, 12)
-						.padding(.horizontal, 16)
-						.background(Capsule().strokeBorder(
-							.white,
-							lineWidth: 2
-						))
-						.frame(width: 120)
+					OnboardingStartButtonView()
 				}
 			).padding(.horizontal)
 		}.frame(
@@ -94,14 +57,9 @@ struct OnboardingFruitView: View {
 		))
 		.cornerRadius(24)
 		.padding(.horizontal, 8)
-		.onAppear(perform: {
-			withAnimation(.easeOut(duration: 0.5)) {
-				isAnimatingImage = true
-			}
-		})
     }
 }
 
 #Preview {
-	OnboardingFruitView(fruit: fruits[0])
+	OnboardingFruitView(fruit: fruitsData[0])
 }

@@ -12,7 +12,9 @@
 		DC944ABE2AE81DB200DB3D12 /* FruitsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC944ABD2AE81DB200DB3D12 /* FruitsScreen.swift */; };
 		DC944AC02AE81DD500DB3D12 /* OnboardingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC944ABF2AE81DD500DB3D12 /* OnboardingScreen.swift */; };
 		DC944AC22AE81E7A00DB3D12 /* OnboardingFruitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC944AC12AE81E7A00DB3D12 /* OnboardingFruitView.swift */; };
-		DC944AC62AE821F600DB3D12 /* FruitImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC944AC52AE821F600DB3D12 /* FruitImageView.swift */; };
+		DC944ACC2AE8374100DB3D12 /* OnboardingStartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC944ACB2AE8374100DB3D12 /* OnboardingStartButtonView.swift */; };
+		DC944ACE2AE8380100DB3D12 /* FruitImageHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC944ACD2AE8380100DB3D12 /* FruitImageHeaderView.swift */; };
+		DC944AD02AE8387E00DB3D12 /* FruitImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC944ACF2AE8387E00DB3D12 /* FruitImageView.swift */; };
 		DCD7D96D2AE19A1F00426C22 /* FructusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD7D96C2AE19A1F00426C22 /* FructusApp.swift */; };
 		DCD7D9712AE19A2100426C22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCD7D9702AE19A2100426C22 /* Assets.xcassets */; };
 		DCD7D9742AE19A2100426C22 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCD7D9732AE19A2100426C22 /* Preview Assets.xcassets */; };
@@ -44,7 +46,9 @@
 		DC944ABD2AE81DB200DB3D12 /* FruitsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsScreen.swift; sourceTree = "<group>"; };
 		DC944ABF2AE81DD500DB3D12 /* OnboardingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreen.swift; sourceTree = "<group>"; };
 		DC944AC12AE81E7A00DB3D12 /* OnboardingFruitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFruitView.swift; sourceTree = "<group>"; };
-		DC944AC52AE821F600DB3D12 /* FruitImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitImageView.swift; sourceTree = "<group>"; };
+		DC944ACB2AE8374100DB3D12 /* OnboardingStartButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStartButtonView.swift; sourceTree = "<group>"; };
+		DC944ACD2AE8380100DB3D12 /* FruitImageHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitImageHeaderView.swift; sourceTree = "<group>"; };
+		DC944ACF2AE8387E00DB3D12 /* FruitImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitImageView.swift; sourceTree = "<group>"; };
 		DCD7D9692AE19A1F00426C22 /* Fructus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fructus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCD7D96C2AE19A1F00426C22 /* FructusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FructusApp.swift; sourceTree = "<group>"; };
 		DCD7D9702AE19A2100426C22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -101,7 +105,9 @@
 			isa = PBXGroup;
 			children = (
 				DC944AC12AE81E7A00DB3D12 /* OnboardingFruitView.swift */,
-				DC944AC52AE821F600DB3D12 /* FruitImageView.swift */,
+				DC944ACB2AE8374100DB3D12 /* OnboardingStartButtonView.swift */,
+				DC944ACD2AE8380100DB3D12 /* FruitImageHeaderView.swift */,
+				DC944ACF2AE8387E00DB3D12 /* FruitImageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -305,12 +311,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCD7D96D2AE19A1F00426C22 /* FructusApp.swift in Sources */,
+				DC944AD02AE8387E00DB3D12 /* FruitImageView.swift in Sources */,
 				DC944AB52AE81C6E00DB3D12 /* FruitsData.swift in Sources */,
 				DC944AC22AE81E7A00DB3D12 /* OnboardingFruitView.swift in Sources */,
 				DC944AC02AE81DD500DB3D12 /* OnboardingScreen.swift in Sources */,
-				DC944AC62AE821F600DB3D12 /* FruitImageView.swift in Sources */,
+				DC944ACE2AE8380100DB3D12 /* FruitImageHeaderView.swift in Sources */,
 				DC944ABE2AE81DB200DB3D12 /* FruitsScreen.swift in Sources */,
 				DC944AAF2AE815AA00DB3D12 /* FruitsModel.swift in Sources */,
+				DC944ACC2AE8374100DB3D12 /* OnboardingStartButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

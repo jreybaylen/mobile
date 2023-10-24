@@ -8,8 +8,21 @@
 import SwiftUI
 
 struct FruitsScreen: View {
+	private let fruits: [ Fruit ] = fruitsData.shuffled()
+	
+	@AppStorage("isOnboardingScreen") var isOnboardingScreen: Bool = false
+	
     var body: some View {
-		Text("Fruits Screen")
+		Button(action: {
+			   isOnboardingScreen = true
+		   }, label: {
+			   Text("Re-Start")
+		   })
+		NavigationView(content: {
+			NavigationLink(destination: Text("Destination")) {
+				Text("Navigate")
+			}
+		})
     }
 }
 
