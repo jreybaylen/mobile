@@ -10,18 +10,65 @@ import SwiftUI
 struct FruitsScreen: View {
 	private let fruits: [ Fruit ] = fruitsData.shuffled()
 	
-	@AppStorage("isOnboardingScreen") var isOnboardingScreen: Bool = false
-	
     var body: some View {
-		Button(action: {
-			   isOnboardingScreen = true
-		   }, label: {
-			   Text("Re-Start")
-		   })
 		NavigationView(content: {
-			NavigationLink(destination: Text("Destination")) {
-				Text("Navigate")
-			}
+			ScrollView(content: {
+				ForEach(
+					fruits,
+					content: {
+						fruit in
+							
+						NavigationLink(destination: Text("Destination")) {
+							HStack(content: {
+								Image(fruit.image)
+									.resizable()
+									.scaledToFit()
+									.shadow(
+										color: Color(
+											red: 0,
+											green: 0,
+											blue: 0,
+											opacity: 0.15
+										),
+										radius: 8,
+										x: 6,
+										y: 8
+									)
+									.frame(
+										width: 80,
+										height: 80
+									)
+								
+								VStack(
+									alignment: .leading,
+									content: {
+										Text(fruit.title.uppercased())
+											.font(.system(
+												.headline,
+												design: .monospaced
+											))
+											.foregroundStyle(fruit.gradientColors[1])
+											.fontWeight(.heavy)
+											.padding(.bottom, 1)
+										
+										Text(fruit.headline)
+											.font(.footnote)
+											.multilineTextAlignment(.leading)
+										
+										Spacer()
+									}
+								)
+								
+								Spacer()
+								
+								Image(systemName: "chevron.right")
+									.opacity(0.5)
+							}).padding(.top, 24)
+						}.padding(.horizontal, 16)
+					}
+				)
+			}).navigationTitle("Fruits")
+				.scrollIndicators(.hidden)
 		})
     }
 }
