@@ -10,6 +10,8 @@ import SwiftUI
 struct FruitsScreen: View {
 	private let fruits: [ Fruit ] = fruitsData.shuffled()
 	
+	@State private var displaySettings = false
+	
     var body: some View {
 		NavigationView(content: {
 			ScrollView(content: {
@@ -80,6 +82,22 @@ struct FruitsScreen: View {
 				)
 			}).navigationTitle("Fruits")
 				.scrollIndicators(.hidden)
+				.toolbar(content: {
+					Button(
+						action: {
+							displaySettings.toggle()
+						},
+						label: {
+							Image(systemName: "slider.horizontal.3")
+								.fontWeight(.bold)
+						}
+					).sheet(
+						isPresented: $displaySettings,
+						content: {
+							SettingsScreen()
+						}
+					)
+				})
 		})
     }
 }
