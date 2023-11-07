@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FruitsScreen: View {
-	private let fruits: [ Fruit ] = fruitsData.shuffled()
+	private let fruits = fruitsData.shuffled()
 	
 	@State private var displaySettings = false
 	

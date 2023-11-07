@@ -25,6 +25,10 @@
 		DCD7D98A2AE19A2100426C22 /* FructusUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD7D9892AE19A2100426C22 /* FructusUITestsLaunchTests.swift */; };
 		DCDE15552AFA75DF00722C96 /* NutritionFactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDE15542AFA75DF00722C96 /* NutritionFactsView.swift */; };
 		DCDE15572AFA839E00722C96 /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDE15562AFA839E00722C96 /* SettingsScreen.swift */; };
+		DCDE15622AFA968B00722C96 /* SettingsProductInfoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDE15612AFA968B00722C96 /* SettingsProductInfoItemView.swift */; };
+		DCDE15642AFA970A00722C96 /* SettingsProductDefinitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDE15632AFA970A00722C96 /* SettingsProductDefinitionView.swift */; };
+		DCDE15662AFA97E400722C96 /* SettingsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDE15652AFA97E400722C96 /* SettingsData.swift */; };
+		DCDE15682AFA97FF00722C96 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDE15672AFA97FF00722C96 /* SettingsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +70,10 @@
 		DCD7D9892AE19A2100426C22 /* FructusUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FructusUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DCDE15542AFA75DF00722C96 /* NutritionFactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionFactsView.swift; sourceTree = "<group>"; };
 		DCDE15562AFA839E00722C96 /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
+		DCDE15612AFA968B00722C96 /* SettingsProductInfoItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsProductInfoItemView.swift; sourceTree = "<group>"; };
+		DCDE15632AFA970A00722C96 /* SettingsProductDefinitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsProductDefinitionView.swift; sourceTree = "<group>"; };
+		DCDE15652AFA97E400722C96 /* SettingsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsData.swift; sourceTree = "<group>"; };
+		DCDE15672AFA97FF00722C96 /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				DC944AAE2AE815AA00DB3D12 /* FruitsModel.swift */,
+				DCDE15672AFA97FF00722C96 /* SettingsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -105,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				DC944AB42AE81C6E00DB3D12 /* FruitsData.swift */,
+				DCDE15652AFA97E400722C96 /* SettingsData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -112,12 +122,9 @@
 		DC944AB72AE81CBF00DB3D12 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				DC944AC12AE81E7A00DB3D12 /* OnboardingFruitView.swift */,
-				DC944ACB2AE8374100DB3D12 /* OnboardingStartButtonView.swift */,
-				DC944ACD2AE8380100DB3D12 /* FruitImageHeaderView.swift */,
-				DC944ACF2AE8387E00DB3D12 /* FruitImageView.swift */,
-				DC658D3A2AFA6D4D00E426F4 /* SourceLinkView.swift */,
-				DCDE15542AFA75DF00722C96 /* NutritionFactsView.swift */,
+				DCDE15602AFA966A00722C96 /* Setting */,
+				DCDE155A2AFA95ED00722C96 /* Onboarding */,
+				DCDE155B2AFA95FA00722C96 /* Fruit */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -127,9 +134,8 @@
 			children = (
 				DCD7D96C2AE19A1F00426C22 /* FructusApp.swift */,
 				DC944ABF2AE81DD500DB3D12 /* OnboardingScreen.swift */,
-				DC944ABD2AE81DB200DB3D12 /* FruitsScreen.swift */,
-				DC944AD12AE852D600DB3D12 /* FruitDetailsScreen.swift */,
-				DCDE15562AFA839E00722C96 /* SettingsScreen.swift */,
+				DCDE155D2AFA961500722C96 /* Fruits */,
+				DCDE155C2AFA960900722C96 /* Settings */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -190,6 +196,52 @@
 				DCD7D9892AE19A2100426C22 /* FructusUITestsLaunchTests.swift */,
 			);
 			path = FructusUITests;
+			sourceTree = "<group>";
+		};
+		DCDE155A2AFA95ED00722C96 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				DC944AC12AE81E7A00DB3D12 /* OnboardingFruitView.swift */,
+				DC944ACB2AE8374100DB3D12 /* OnboardingStartButtonView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		DCDE155B2AFA95FA00722C96 /* Fruit */ = {
+			isa = PBXGroup;
+			children = (
+				DC944ACD2AE8380100DB3D12 /* FruitImageHeaderView.swift */,
+				DC944ACF2AE8387E00DB3D12 /* FruitImageView.swift */,
+				DC658D3A2AFA6D4D00E426F4 /* SourceLinkView.swift */,
+				DCDE15542AFA75DF00722C96 /* NutritionFactsView.swift */,
+			);
+			path = Fruit;
+			sourceTree = "<group>";
+		};
+		DCDE155C2AFA960900722C96 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				DCDE15562AFA839E00722C96 /* SettingsScreen.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		DCDE155D2AFA961500722C96 /* Fruits */ = {
+			isa = PBXGroup;
+			children = (
+				DC944ABD2AE81DB200DB3D12 /* FruitsScreen.swift */,
+				DC944AD12AE852D600DB3D12 /* FruitDetailsScreen.swift */,
+			);
+			path = Fruits;
+			sourceTree = "<group>";
+		};
+		DCDE15602AFA966A00722C96 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				DCDE15612AFA968B00722C96 /* SettingsProductInfoItemView.swift */,
+				DCDE15632AFA970A00722C96 /* SettingsProductDefinitionView.swift */,
+			);
+			path = Setting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,12 +374,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCDE15622AFA968B00722C96 /* SettingsProductInfoItemView.swift in Sources */,
 				DCD7D96D2AE19A1F00426C22 /* FructusApp.swift in Sources */,
+				DCDE15682AFA97FF00722C96 /* SettingsModel.swift in Sources */,
 				DC658D3B2AFA6D4D00E426F4 /* SourceLinkView.swift in Sources */,
 				DC944AD22AE852D600DB3D12 /* FruitDetailsScreen.swift in Sources */,
+				DCDE15642AFA970A00722C96 /* SettingsProductDefinitionView.swift in Sources */,
 				DCDE15552AFA75DF00722C96 /* NutritionFactsView.swift in Sources */,
 				DC944AD02AE8387E00DB3D12 /* FruitImageView.swift in Sources */,
 				DC944AB52AE81C6E00DB3D12 /* FruitsData.swift in Sources */,
+				DCDE15662AFA97E400722C96 /* SettingsData.swift in Sources */,
 				DC944AC22AE81E7A00DB3D12 /* OnboardingFruitView.swift in Sources */,
 				DCDE15572AFA839E00722C96 /* SettingsScreen.swift in Sources */,
 				DC944AC02AE81DD500DB3D12 /* OnboardingScreen.swift in Sources */,
