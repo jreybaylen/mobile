@@ -18,7 +18,7 @@ struct FruitsScreen: View {
 					content: {
 						fruit in
 							
-						NavigationLink(destination: Text("Destination")) {
+						NavigationLink(destination: FruitDetailsScreen(fruit: fruit)) {
 							HStack(content: {
 								Image(fruit.image)
 									.resizable()
