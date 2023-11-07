@@ -32,6 +32,8 @@ struct FruitDetailsScreen: View {
 							.font(.headline)
 							.multilineTextAlignment(.leading)
 						
+						NutritionFactsView(fruit: fruit)
+						
 						Text("Learn more about \(fruit.title)".uppercased())
 							.fontWeight(.semibold)
 							.foregroundStyle(fruit.gradientColors[1])

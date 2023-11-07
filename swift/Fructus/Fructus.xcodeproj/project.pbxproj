@@ -23,6 +23,7 @@
 		DCD7D97E2AE19A2100426C22 /* FructusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD7D97D2AE19A2100426C22 /* FructusTests.swift */; };
 		DCD7D9882AE19A2100426C22 /* FructusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD7D9872AE19A2100426C22 /* FructusUITests.swift */; };
 		DCD7D98A2AE19A2100426C22 /* FructusUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD7D9892AE19A2100426C22 /* FructusUITestsLaunchTests.swift */; };
+		DCDE15552AFA75DF00722C96 /* NutritionFactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDE15542AFA75DF00722C96 /* NutritionFactsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		DCD7D9832AE19A2100426C22 /* FructusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FructusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCD7D9872AE19A2100426C22 /* FructusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FructusUITests.swift; sourceTree = "<group>"; };
 		DCD7D9892AE19A2100426C22 /* FructusUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FructusUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DCDE15542AFA75DF00722C96 /* NutritionFactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionFactsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				DC944ACD2AE8380100DB3D12 /* FruitImageHeaderView.swift */,
 				DC944ACF2AE8387E00DB3D12 /* FruitImageView.swift */,
 				DC658D3A2AFA6D4D00E426F4 /* SourceLinkView.swift */,
+				DCDE15542AFA75DF00722C96 /* NutritionFactsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				DCD7D96D2AE19A1F00426C22 /* FructusApp.swift in Sources */,
 				DC658D3B2AFA6D4D00E426F4 /* SourceLinkView.swift in Sources */,
 				DC944AD22AE852D600DB3D12 /* FruitDetailsScreen.swift in Sources */,
+				DCDE15552AFA75DF00722C96 /* NutritionFactsView.swift in Sources */,
 				DC944AD02AE8387E00DB3D12 /* FruitImageView.swift in Sources */,
 				DC944AB52AE81C6E00DB3D12 /* FruitsData.swift in Sources */,
 				DC944AC22AE81E7A00DB3D12 /* OnboardingFruitView.swift in Sources */,

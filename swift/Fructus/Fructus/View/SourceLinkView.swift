@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SourceLinkView: View {
     var body: some View {
-		GroupBox() {
+		GroupBox(content: {
 			HStack {
 				Text("Content Source")
 				
@@ -26,7 +26,7 @@ struct SourceLinkView: View {
 				
 				Image(systemName: "arrow.up.right.square")
 			}
-		}
+		})
     }
 }
 
