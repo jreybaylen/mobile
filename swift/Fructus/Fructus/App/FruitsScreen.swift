@@ -20,24 +20,35 @@ struct FruitsScreen: View {
 							
 						NavigationLink(destination: FruitDetailsScreen(fruit: fruit)) {
 							HStack(content: {
-								Image(fruit.image)
-									.resizable()
-									.scaledToFit()
-									.shadow(
-										color: Color(
-											red: 0,
-											green: 0,
-											blue: 0,
-											opacity: 0.15
-										),
-										radius: 8,
-										x: 6,
-										y: 8
+								ZStack {
+									LinearGradient(
+										colors: fruit.gradientColors,
+										startPoint: .top,
+										endPoint: .bottom
+									).frame(
+										width: 100,
+										height: 100
 									)
-									.frame(
-										width: 80,
-										height: 80
-									)
+									
+									Image(fruit.image)
+										.resizable()
+										.scaledToFit()
+										.shadow(
+											color: Color(
+												red: 0,
+												green: 0,
+												blue: 0,
+												opacity: 0.15
+											),
+											radius: 8,
+											x: 6,
+											y: 8
+										)
+										.frame(
+											width: 80,
+											height: 80
+										)
+								}.clipShape(RoundedRectangle(cornerRadius: 8))
 								
 								VStack(
 									alignment: .leading,

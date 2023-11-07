@@ -9,10 +9,28 @@ import SwiftUI
 
 struct SourceLinkView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+		GroupBox() {
+			HStack {
+				Text("Content Source")
+				
+				Spacer()
+				
+				Link(
+					destination: URL(string: "https://wikipedia.com")!,
+					label: {
+						Text("Wikipedia")
+							.font(.system(size: 16, design: .monospaced))
+							.fontWeight(.medium)
+					}
+				)
+				
+				Image(systemName: "arrow.up.right.square")
+			}
+		}
     }
 }
 
 #Preview {
     SourceLinkView()
+		.padding(.horizontal, 20)
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC658D3B2AFA6D4D00E426F4 /* SourceLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC658D3A2AFA6D4D00E426F4 /* SourceLinkView.swift */; };
 		DC944AAF2AE815AA00DB3D12 /* FruitsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC944AAE2AE815AA00DB3D12 /* FruitsModel.swift */; };
 		DC944AB52AE81C6E00DB3D12 /* FruitsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC944AB42AE81C6E00DB3D12 /* FruitsData.swift */; };
 		DC944ABE2AE81DB200DB3D12 /* FruitsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC944ABD2AE81DB200DB3D12 /* FruitsScreen.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC658D3A2AFA6D4D00E426F4 /* SourceLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceLinkView.swift; sourceTree = "<group>"; };
 		DC944AAE2AE815AA00DB3D12 /* FruitsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsModel.swift; sourceTree = "<group>"; };
 		DC944AB42AE81C6E00DB3D12 /* FruitsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsData.swift; sourceTree = "<group>"; };
 		DC944ABD2AE81DB200DB3D12 /* FruitsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsScreen.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				DC944ACB2AE8374100DB3D12 /* OnboardingStartButtonView.swift */,
 				DC944ACD2AE8380100DB3D12 /* FruitImageHeaderView.swift */,
 				DC944ACF2AE8387E00DB3D12 /* FruitImageView.swift */,
+				DC658D3A2AFA6D4D00E426F4 /* SourceLinkView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCD7D96D2AE19A1F00426C22 /* FructusApp.swift in Sources */,
+				DC658D3B2AFA6D4D00E426F4 /* SourceLinkView.swift in Sources */,
 				DC944AD22AE852D600DB3D12 /* FruitDetailsScreen.swift in Sources */,
 				DC944AD02AE8387E00DB3D12 /* FruitImageView.swift in Sources */,
 				DC944AB52AE81C6E00DB3D12 /* FruitsData.swift in Sources */,
