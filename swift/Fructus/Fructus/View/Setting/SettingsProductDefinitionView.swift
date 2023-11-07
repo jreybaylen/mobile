@@ -12,7 +12,7 @@ struct SettingsProductDefinitionView: View {
 		GroupBox(
 			content: {
 				Divider()
-					.padding(.bottom, 5)
+					.padding(.bottom, 10)
 				
 				HStack(
 					alignment: .top,
@@ -27,21 +27,21 @@ struct SettingsProductDefinitionView: View {
 								height: 80
 							)
 						
-						Text("Most fruits are naturaly low in fat, sodium, and calories. None have cholesterol. Fruits are sources of many essential nutrients, including potassium, dietary, vitamins, and much more.")
+						Text("Most fruits are naturaly low in fat, sodium, and calories. Fruits are sources of many essential nutrients, including potassium, dietary, vitamins, and much more.")
 							.font(.footnote)
 					}
 				)
 			},
 			label: {
 				HStack {
-					Text("Fructus")
+					Text("Fructus".uppercased())
 					
 					Spacer()
 					
 					Image(systemName: "info.circle")
 				}
 			}
-		).padding(.bottom, 40)
+		).padding(.bottom, 20)
     }
 }
 

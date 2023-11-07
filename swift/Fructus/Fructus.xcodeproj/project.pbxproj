@@ -29,6 +29,7 @@
 		DCDE15642AFA970A00722C96 /* SettingsProductDefinitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDE15632AFA970A00722C96 /* SettingsProductDefinitionView.swift */; };
 		DCDE15662AFA97E400722C96 /* SettingsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDE15652AFA97E400722C96 /* SettingsData.swift */; };
 		DCDE15682AFA97FF00722C96 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDE15672AFA97FF00722C96 /* SettingsModel.swift */; };
+		DCDE156A2AFAA03C00722C96 /* SettingsProductCustomizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDE15692AFAA03C00722C96 /* SettingsProductCustomizationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		DCDE15632AFA970A00722C96 /* SettingsProductDefinitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsProductDefinitionView.swift; sourceTree = "<group>"; };
 		DCDE15652AFA97E400722C96 /* SettingsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsData.swift; sourceTree = "<group>"; };
 		DCDE15672AFA97FF00722C96 /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
+		DCDE15692AFAA03C00722C96 /* SettingsProductCustomizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsProductCustomizationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +242,7 @@
 			children = (
 				DCDE15612AFA968B00722C96 /* SettingsProductInfoItemView.swift */,
 				DCDE15632AFA970A00722C96 /* SettingsProductDefinitionView.swift */,
+				DCDE15692AFAA03C00722C96 /* SettingsProductCustomizationView.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 				DC944AC02AE81DD500DB3D12 /* OnboardingScreen.swift in Sources */,
 				DC944ACE2AE8380100DB3D12 /* FruitImageHeaderView.swift in Sources */,
 				DC944ABE2AE81DB200DB3D12 /* FruitsScreen.swift in Sources */,
+				DCDE156A2AFAA03C00722C96 /* SettingsProductCustomizationView.swift in Sources */,
 				DC944AAF2AE815AA00DB3D12 /* FruitsModel.swift in Sources */,
 				DC944ACC2AE8374100DB3D12 /* OnboardingStartButtonView.swift in Sources */,
 			);
