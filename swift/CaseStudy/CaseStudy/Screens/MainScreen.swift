@@ -12,13 +12,8 @@ struct MainScreen: View {
 	
 	var body: some View {
 		VStack {
-			let _ = print(auth.isLoggedIn)
-			
 			if auth.isLoggedIn {
-				Image(systemName: "globe")
-					.imageScale(.large)
-					.foregroundStyle(.tint)
-				Text("Hello, world!")
+				PDFViewer()
 			} else {
 				Text("Unlock the App using Biometrics")
 			}

@@ -15,6 +15,8 @@
 		DC0119582B0634100083AF94 /* CaseStudyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0119572B0634100083AF94 /* CaseStudyUITestsLaunchTests.swift */; };
 		DC01196A2B063E390083AF94 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0119692B063E390083AF94 /* MainScreen.swift */; };
 		DC01196D2B063E6E0083AF94 /* AuthUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC01196C2B063E6E0083AF94 /* AuthUtility.swift */; };
+		DC0119752B0646370083AF94 /* test.pdf in Resources */ = {isa = PBXBuildFile; fileRef = DC0119742B0646370083AF94 /* test.pdf */; };
+		DC0119772B064B4A0083AF94 /* PDFKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0119762B064B4A0083AF94 /* PDFKitView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		DC0119572B0634100083AF94 /* CaseStudyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseStudyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DC0119692B063E390083AF94 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		DC01196C2B063E6E0083AF94 /* AuthUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUtility.swift; sourceTree = "<group>"; };
+		DC0119742B0646370083AF94 /* test.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = test.pdf; path = ../../../../../../../../Downloads/test.pdf; sourceTree = "<group>"; };
+		DC0119762B064B4A0083AF94 /* PDFKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFKitView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,8 @@
 		DC0119392B06340F0083AF94 /* CaseStudy */ = {
 			isa = PBXGroup;
 			children = (
+				DC0119732B0646240083AF94 /* PDFs */,
+				DC01196E2B0640CE0083AF94 /* Views */,
 				DC01196B2B063E5F0083AF94 /* Utilities */,
 				DC0119652B063BBF0083AF94 /* Screens */,
 				DC01193A2B06340F0083AF94 /* CaseStudyApp.swift */,
@@ -144,6 +150,22 @@
 				DC01196C2B063E6E0083AF94 /* AuthUtility.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		DC01196E2B0640CE0083AF94 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DC0119762B064B4A0083AF94 /* PDFKitView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DC0119732B0646240083AF94 /* PDFs */ = {
+			isa = PBXGroup;
+			children = (
+				DC0119742B0646370083AF94 /* test.pdf */,
+			);
+			path = PDFs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +274,7 @@
 			files = (
 				DC0119422B0634100083AF94 /* Preview Assets.xcassets in Resources */,
 				DC01193F2B0634100083AF94 /* Assets.xcassets in Resources */,
+				DC0119752B0646370083AF94 /* test.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC0119772B064B4A0083AF94 /* PDFKitView.swift in Sources */,
 				DC01196A2B063E390083AF94 /* MainScreen.swift in Sources */,
 				DC01196D2B063E6E0083AF94 /* AuthUtility.swift in Sources */,
 				DC01193B2B06340F0083AF94 /* CaseStudyApp.swift in Sources */,
