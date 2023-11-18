@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct LocationView: View {
+	
     var body: some View {
 		Text("Location View")
     }
+	
 }
 
 #Preview {

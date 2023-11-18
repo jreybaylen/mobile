@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct WatchView: View {
+	
     var body: some View {
         Text("Watch View")
     }
+	
 }
 
 #Preview {

@@ -8,14 +8,16 @@
 import SwiftUI
 
 struct TabItemView: View {
+	
 	let icon: String
 	let label: String
 	
-    var body: some View {
+	var body: some View {
 		Image(systemName: icon)
 		
 		Text(label.capitalized)
-    }
+	}
+	
 }
 
 #Preview {
