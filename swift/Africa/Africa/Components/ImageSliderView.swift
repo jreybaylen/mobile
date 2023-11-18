@@ -9,16 +9,16 @@ import SwiftUI
 
 struct ImageSliderView: View {
 	
-	let coverImages: [ CoverImage ] = Bundle.main.decode("covers.json")
+	let images: [ CoverImage ]
 	
     var body: some View {
 		TabView(content: {
 			ForEach(
-				coverImages,
+				images,
 				content: {
-					coverImage in
+					image in
 					
-					Image(coverImage.name)
+					Image(image.name)
 						.resizable()
 						.scaledToFill()
 				}
@@ -29,5 +29,5 @@ struct ImageSliderView: View {
 }
 
 #Preview {
-    ImageSliderView()
+    ImageSliderView(images: Bundle.main.decode("covers.json"))
 }

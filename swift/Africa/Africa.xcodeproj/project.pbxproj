@@ -36,6 +36,8 @@
 		DC9409FC2B08D8EF00F70064 /* ImageSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9409FB2B08D8EF00F70064 /* ImageSliderView.swift */; };
 		DC9409FF2B08DAE900F70064 /* ImageSliderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9409FE2B08DAE900F70064 /* ImageSliderModel.swift */; };
 		DC940A022B08DF7000F70064 /* CodableBundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC940A012B08DF7000F70064 /* CodableBundleExtension.swift */; };
+		DC940A042B08EAE600F70064 /* ImageWithDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC940A032B08EAE600F70064 /* ImageWithDescriptionView.swift */; };
+		DC940A082B08EDD600F70064 /* AnimalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC940A072B08EDD600F70064 /* AnimalModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +91,8 @@
 		DC9409FB2B08D8EF00F70064 /* ImageSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSliderView.swift; sourceTree = "<group>"; };
 		DC9409FE2B08DAE900F70064 /* ImageSliderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSliderModel.swift; sourceTree = "<group>"; };
 		DC940A012B08DF7000F70064 /* CodableBundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableBundleExtension.swift; sourceTree = "<group>"; };
+		DC940A032B08EAE600F70064 /* ImageWithDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageWithDescriptionView.swift; sourceTree = "<group>"; };
+		DC940A072B08EDD600F70064 /* AnimalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +243,7 @@
 			children = (
 				DC8F03022B08ADDF00D7A385 /* TabItemView.swift */,
 				DC9409FB2B08D8EF00F70064 /* ImageSliderView.swift */,
+				DC940A032B08EAE600F70064 /* ImageWithDescriptionView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -271,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				DC9409FE2B08DAE900F70064 /* ImageSliderModel.swift */,
+				DC940A072B08EDD600F70064 /* AnimalModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -428,11 +434,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC8F03032B08ADDF00D7A385 /* TabItemView.swift in Sources */,
+				DC940A042B08EAE600F70064 /* ImageWithDescriptionView.swift in Sources */,
 				DC9409FF2B08DAE900F70064 /* ImageSliderModel.swift in Sources */,
 				DC9409FC2B08D8EF00F70064 /* ImageSliderView.swift in Sources */,
 				DC9409FA2B08D72000F70064 /* LocationView.swift in Sources */,
 				DC940A022B08DF7000F70064 /* CodableBundleExtension.swift in Sources */,
 				DC7619652B08A8820064AC5E /* MainScreen.swift in Sources */,
+				DC940A082B08EDD600F70064 /* AnimalModel.swift in Sources */,
 				DC8F030A2B08B01000D7A385 /* BrowseView.swift in Sources */,
 				DC76197B2B08ABF00064AC5E /* GalleryView.swift in Sources */,
 				DC7619252B08A4D50064AC5E /* AfricaApp.swift in Sources */,
