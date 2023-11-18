@@ -42,21 +42,5 @@ struct AnimalGalleryView: View {
 }
 
 #Preview {
-	AnimalGalleryView(
-		animal: Animal(
-			id: "lion",
-			name: "Lion",
-			headline: "The world's most social felines",
-			description: "",
-			link: "",
-			image: "lion",
-			gallery: [
-				"lion-1",
-				"lion-2",
-				"lion-3",
-				"lion-4"
-			],
-			fact: []
-		 )
-	)
+	AnimalGalleryView(animal: TestAnimalData)
 }

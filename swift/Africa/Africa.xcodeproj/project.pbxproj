@@ -40,9 +40,13 @@
 		DC940A0A2B0907FD00F70064 /* AnimalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC940A092B0907FD00F70064 /* AnimalsView.swift */; };
 		DC940A0C2B09082E00F70064 /* AnimalsCoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC940A0B2B09082E00F70064 /* AnimalsCoverView.swift */; };
 		DC940A112B0909E700F70064 /* AnimalDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC940A102B0909E700F70064 /* AnimalDetailsView.swift */; };
-		DC940A132B090EC800F70064 /* IconWithLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC940A122B090EC800F70064 /* IconWithLabel.swift */; };
 		DC940A1C2B09153600F70064 /* AnimalGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC940A1B2B09153600F70064 /* AnimalGalleryView.swift */; };
 		DC940A202B09169000F70064 /* TabSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC940A1F2B09169000F70064 /* TabSliderView.swift */; };
+		DC940A222B09219D00F70064 /* AnimalFactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC940A212B09219D00F70064 /* AnimalFactsView.swift */; };
+		DC940A242B09233100F70064 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC940A232B09233100F70064 /* TestData.swift */; };
+		DC940A262B0926F100F70064 /* MapKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC940A252B0926F100F70064 /* MapKitView.swift */; };
+		DC940A282B09270300F70064 /* IconWithLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC940A272B09270300F70064 /* IconWithLabelView.swift */; };
+		DC940A2A2B092E2300F70064 /* WebsiteLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC940A292B092E2300F70064 /* WebsiteLinkView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,9 +104,13 @@
 		DC940A092B0907FD00F70064 /* AnimalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsView.swift; sourceTree = "<group>"; };
 		DC940A0B2B09082E00F70064 /* AnimalsCoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsCoverView.swift; sourceTree = "<group>"; };
 		DC940A102B0909E700F70064 /* AnimalDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDetailsView.swift; sourceTree = "<group>"; };
-		DC940A122B090EC800F70064 /* IconWithLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconWithLabel.swift; sourceTree = "<group>"; };
 		DC940A1B2B09153600F70064 /* AnimalGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalGalleryView.swift; sourceTree = "<group>"; };
 		DC940A1F2B09169000F70064 /* TabSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabSliderView.swift; sourceTree = "<group>"; };
+		DC940A212B09219D00F70064 /* AnimalFactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalFactsView.swift; sourceTree = "<group>"; };
+		DC940A232B09233100F70064 /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
+		DC940A252B0926F100F70064 /* MapKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitView.swift; sourceTree = "<group>"; };
+		DC940A272B09270300F70064 /* IconWithLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconWithLabelView.swift; sourceTree = "<group>"; };
+		DC940A292B092E2300F70064 /* WebsiteLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsiteLinkView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +229,7 @@
 		DC7619662B08A8E80064AC5E /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				DC940A232B09233100F70064 /* TestData.swift */,
 				DC76196A2B08A8FA0064AC5E /* animals.json */,
 				DC7619682B08A8FA0064AC5E /* covers.json */,
 				DC7619672B08A8FA0064AC5E /* locations.json */,
@@ -253,8 +262,10 @@
 			children = (
 				DC940A1F2B09169000F70064 /* TabSliderView.swift */,
 				DC8F03022B08ADDF00D7A385 /* TabItemView.swift */,
-				DC940A122B090EC800F70064 /* IconWithLabel.swift */,
+				DC940A272B09270300F70064 /* IconWithLabelView.swift */,
 				DC940A032B08EAE600F70064 /* ImageWithDescriptionView.swift */,
+				DC940A252B0926F100F70064 /* MapKitView.swift */,
+				DC940A292B092E2300F70064 /* WebsiteLinkView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -308,6 +319,7 @@
 			children = (
 				DC940A102B0909E700F70064 /* AnimalDetailsView.swift */,
 				DC940A1B2B09153600F70064 /* AnimalGalleryView.swift */,
+				DC940A212B09219D00F70064 /* AnimalFactsView.swift */,
 			);
 			path = AnimalDetails;
 			sourceTree = "<group>";
@@ -459,15 +471,19 @@
 				DC8F03032B08ADDF00D7A385 /* TabItemView.swift in Sources */,
 				DC940A042B08EAE600F70064 /* ImageWithDescriptionView.swift in Sources */,
 				DC9409FF2B08DAE900F70064 /* ImageSliderModel.swift in Sources */,
-				DC940A132B090EC800F70064 /* IconWithLabel.swift in Sources */,
 				DC9409FA2B08D72000F70064 /* LocationView.swift in Sources */,
+				DC940A2A2B092E2300F70064 /* WebsiteLinkView.swift in Sources */,
 				DC940A112B0909E700F70064 /* AnimalDetailsView.swift in Sources */,
+				DC940A282B09270300F70064 /* IconWithLabelView.swift in Sources */,
+				DC940A222B09219D00F70064 /* AnimalFactsView.swift in Sources */,
 				DC940A202B09169000F70064 /* TabSliderView.swift in Sources */,
 				DC940A022B08DF7000F70064 /* CodableBundleExtension.swift in Sources */,
 				DC940A0C2B09082E00F70064 /* AnimalsCoverView.swift in Sources */,
 				DC7619652B08A8820064AC5E /* MainScreen.swift in Sources */,
 				DC940A082B08EDD600F70064 /* AnimalModel.swift in Sources */,
+				DC940A262B0926F100F70064 /* MapKitView.swift in Sources */,
 				DC8F030A2B08B01000D7A385 /* BrowseView.swift in Sources */,
+				DC940A242B09233100F70064 /* TestData.swift in Sources */,
 				DC940A0A2B0907FD00F70064 /* AnimalsView.swift in Sources */,
 				DC76197B2B08ABF00064AC5E /* GalleryView.swift in Sources */,
 				DC7619252B08A4D50064AC5E /* AfricaApp.swift in Sources */,

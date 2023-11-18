@@ -30,7 +30,7 @@ struct MainScreen: View {
 			LocationView()
 				.tabItem {
 					TabItemView(
-						icon: "location.fill",
+						icon: "map",
 						label: "Location"
 					)
 				}

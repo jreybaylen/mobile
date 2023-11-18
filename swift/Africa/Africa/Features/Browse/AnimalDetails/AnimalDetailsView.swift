@@ -40,12 +40,53 @@ struct AnimalDetailsView: View {
 							.padding(.horizontal)
 						
 						Group(content: {
-							IconWithLabel(
+							IconWithLabelView(
 								icon: "photo.on.rectangle",
 								label: "Wilderness in Pictures"
 							)
 							
 							AnimalGalleryView(animal: animal)
+						}).padding(.horizontal)
+						
+						Group(content: {
+							IconWithLabelView(
+								icon: "questionmark.circle",
+								label: "Did you know?"
+							)
+							
+							AnimalFactsView(animal: animal)
+						}).padding(.horizontal)
+						
+						Group(content: {
+							IconWithLabelView(
+								icon: "info.circle",
+								label: "About The \(animal.name)".capitalized
+							)
+							
+							Text(animal.description)
+								.multilineTextAlignment(.leading)
+								.layoutPriority(1)
+						}).padding(.horizontal)
+						
+						Group(content: {
+							IconWithLabelView(
+								icon: "map",
+								label: "National Parks"
+							)
+							
+							MapKitView()
+						}).padding(.horizontal)
+						
+						Group(content: {
+							IconWithLabelView(
+								icon: "books.vertical",
+								label: "Learn More"
+							)
+							
+							WebsiteLinkView(
+								url: animal.link,
+								label: animal.name
+							)
 						}).padding(.horizontal)
 					}
 				).navigationTitle("The \(animal.name)")
@@ -58,22 +99,6 @@ struct AnimalDetailsView: View {
 
 #Preview {
 	NavigationView(content: {
-		AnimalDetailsView(
-			animal: Animal(
-				id: "lion",
-				name: "Lion",
-				headline: "The world's most social felines",
-				description: "",
-				link: "",
-				image: "lion",
-				gallery: [
-					"lion-1",
-					"lion-2",
-					"lion-3",
-					"lion-4"
-				],
-				fact: []
-			)
-		)
+		AnimalDetailsView(animal: TestAnimalData)
 	})
 }
