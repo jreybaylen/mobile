@@ -1,5 +1,5 @@
 //
-//  ImageSliderView.swift
+//  TabSliderView.swift
 //  Africa
 //
 //  Created by John Rey on 11/18/23.
@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct ImageSliderView: View {
+struct TabSliderView: View {
 	
 	let images: [ CoverImage ]
 	
-    var body: some View {
+	var body: some View {
 		TabView(content: {
 			ForEach(
 				images,
@@ -24,10 +24,10 @@ struct ImageSliderView: View {
 				}
 			)
 		}).tabViewStyle(PageTabViewStyle())
-    }
+	}
 	
 }
 
 #Preview {
-    ImageSliderView(images: Bundle.main.decode("covers.json"))
+	TabSliderView(images: Bundle.main.decode("covers.json"))
 }

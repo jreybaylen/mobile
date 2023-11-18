@@ -40,6 +40,7 @@ struct ImageWithDescriptionView: View {
 							.lineLimit(3)
 							.multilineTextAlignment(.leading)
 							.font(.footnote)
+							.foregroundColor(Color("TextColor"))
 					}
 				)
 				
