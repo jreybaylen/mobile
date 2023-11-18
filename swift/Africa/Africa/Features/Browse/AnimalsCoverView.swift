@@ -14,18 +14,6 @@ struct AnimalsCoverView: View {
     var body: some View {
 		TabSliderView(images: coverImages)
 			.frame(height: 300)
-			.padding(
-				.bottom,
-				10
-			)
-			.listRowInsets(
-				EdgeInsets(
-					top: 0,
-					leading: 0,
-					bottom: 0,
-					trailing: 0
-				)
-			)
     }
 	
 }

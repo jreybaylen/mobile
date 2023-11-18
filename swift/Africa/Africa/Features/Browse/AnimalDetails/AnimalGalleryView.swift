@@ -16,7 +16,7 @@ struct AnimalGalleryView: View {
 			.horizontal,
 			showsIndicators: false,
 			content: {
-				HStack(
+				LazyHStack(
 					alignment: .center,
 					spacing: 15,
 					content: {

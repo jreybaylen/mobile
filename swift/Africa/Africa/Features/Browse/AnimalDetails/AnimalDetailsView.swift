@@ -15,7 +15,7 @@ struct AnimalDetailsView: View {
 		ScrollView(
 			showsIndicators: false,
 			content: {
-				VStack(
+				LazyVStack(
 					alignment: .center,
 					spacing: 20,
 					content: {

@@ -11,14 +11,12 @@ struct BrowseView: View {
 	
 	var body: some View {
 		NavigationView(content: {
-			ScrollView(
-				showsIndicators: false,
-				content: {
-					AnimalsCoverView()
-					
-					AnimalsView()
-				}
-			).navigationTitle("Africa")
+			List(content: {
+				AnimalsCoverView()
+				
+				AnimalsView()
+			}).listStyle(PlainListStyle())
+				.navigationTitle("Africa")
 		})
     }
 	

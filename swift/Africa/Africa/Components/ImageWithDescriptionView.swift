@@ -43,14 +43,12 @@ struct ImageWithDescriptionView: View {
 							.foregroundColor(Color("TextColor"))
 					}
 				)
-				
-				Spacer()
 			}
 		).padding(
 			EdgeInsets(
 				top: 0,
-				leading: 12,
-				bottom: 12,
+				leading: 0,
+				bottom: 0,
 				trailing: 0
 			)
 		)
