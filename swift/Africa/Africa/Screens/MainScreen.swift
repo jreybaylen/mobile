@@ -9,13 +9,39 @@ import SwiftUI
 
 struct MainScreen: View {
     var body: some View {
-		VStack {
-			Image(systemName: "globe")
-				.imageScale(.large)
-				.foregroundStyle(.tint)
-			Text("Hello, world!")
-		}
-		.padding()
+		TabView(content: {
+			BrowseView()
+				.tabItem {
+					TabItemView(
+						icon: "square.grid.2x2",
+						label: "Browse"
+					)
+				}
+			
+			WatchView()
+				.tabItem {
+					TabItemView(
+						icon: "play.rectangle",
+						label: "Watch"
+					)
+				}
+				
+			MapView()
+				.tabItem {
+					TabItemView(
+						icon: "map",
+						label: "Location"
+					)
+				}
+			
+			GalleryView()
+				.tabItem {
+					TabItemView(
+						icon: "photo",
+						label: "Gallery"
+					)
+				}
+		})
     }
 }
 

@@ -1,5 +1,5 @@
 //
-//  PreviewView.swift
+//  BrowseView.swift
 //  Africa
 //
 //  Created by John Rey on 11/18/23.
@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct PreviewView: View {
+struct BrowseView: View {
     var body: some View {
-        Text("Preview View")
+        Text("Browse View")
     }
 }
 
 #Preview {
-    PreviewView()
+    BrowseView()
 }
