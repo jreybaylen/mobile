@@ -29,10 +29,10 @@
 		DC76196D2B08A8FA0064AC5E /* videos.json in Resources */ = {isa = PBXBuildFile; fileRef = DC7619692B08A8FA0064AC5E /* videos.json */; };
 		DC76196E2B08A8FA0064AC5E /* animals.json in Resources */ = {isa = PBXBuildFile; fileRef = DC76196A2B08A8FA0064AC5E /* animals.json */; };
 		DC76197B2B08ABF00064AC5E /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC76197A2B08ABF00064AC5E /* GalleryView.swift */; };
-		DC76197D2B08AC000064AC5E /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC76197C2B08AC000064AC5E /* MapView.swift */; };
 		DC8F03032B08ADDF00D7A385 /* TabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8F03022B08ADDF00D7A385 /* TabItemView.swift */; };
 		DC8F03062B08AF5F00D7A385 /* WatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8F03052B08AF5F00D7A385 /* WatchView.swift */; };
 		DC8F030A2B08B01000D7A385 /* BrowseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8F03092B08B01000D7A385 /* BrowseView.swift */; };
+		DC9409FA2B08D72000F70064 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9409F92B08D72000F70064 /* LocationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,10 +79,10 @@
 		DC76196A2B08A8FA0064AC5E /* animals.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = animals.json; path = "../../../../../materials/africa-app/Resources/data/animals.json"; sourceTree = "<group>"; };
 		DC76196F2B08AA100064AC5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DC76197A2B08ABF00064AC5E /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
-		DC76197C2B08AC000064AC5E /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		DC8F03022B08ADDF00D7A385 /* TabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemView.swift; sourceTree = "<group>"; };
 		DC8F03052B08AF5F00D7A385 /* WatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchView.swift; sourceTree = "<group>"; };
 		DC8F03092B08B01000D7A385 /* BrowseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseView.swift; sourceTree = "<group>"; };
+		DC9409F92B08D72000F70064 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,20 +210,12 @@
 		DC7619712B08AB1E0064AC5E /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				DC9409F82B08D71500F70064 /* Location */,
 				DC8F03082B08B00600D7A385 /* Browse */,
 				DC8F03042B08AF5300D7A385 /* Watch */,
 				DC7619792B08ABCB0064AC5E /* Gallery */,
-				DC7619782B08ABC70064AC5E /* Map */,
 			);
 			path = Features;
-			sourceTree = "<group>";
-		};
-		DC7619782B08ABC70064AC5E /* Map */ = {
-			isa = PBXGroup;
-			children = (
-				DC76197C2B08AC000064AC5E /* MapView.swift */,
-			);
-			path = Map;
 			sourceTree = "<group>";
 		};
 		DC7619792B08ABCB0064AC5E /* Gallery */ = {
@@ -256,6 +248,14 @@
 				DC8F03092B08B01000D7A385 /* BrowseView.swift */,
 			);
 			path = Browse;
+			sourceTree = "<group>";
+		};
+		DC9409F82B08D71500F70064 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				DC9409F92B08D72000F70064 /* LocationView.swift */,
+			);
+			path = Location;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -403,9 +403,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC8F03032B08ADDF00D7A385 /* TabItemView.swift in Sources */,
+				DC9409FA2B08D72000F70064 /* LocationView.swift in Sources */,
 				DC7619652B08A8820064AC5E /* MainScreen.swift in Sources */,
 				DC8F030A2B08B01000D7A385 /* BrowseView.swift in Sources */,
-				DC76197D2B08AC000064AC5E /* MapView.swift in Sources */,
 				DC76197B2B08ABF00064AC5E /* GalleryView.swift in Sources */,
 				DC7619252B08A4D50064AC5E /* AfricaApp.swift in Sources */,
 				DC8F03062B08AF5F00D7A385 /* WatchView.swift in Sources */,
@@ -576,16 +576,19 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Africa/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Africa;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jreybaylen.Africa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -606,16 +609,19 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Africa/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Africa;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jreybaylen.Africa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
