@@ -20,9 +20,25 @@ struct WatchView: View {
 					content: {
 						index in
 						
-						VideoView(video: videos[ index ])
-							.padding(.top, 6)
-							.padding(.bottom, index == (videos.count - 1) ? 8 : 0)
+						let video = videos[ index ]
+						
+						NavigationLink(
+							destination: VideoPlayerView(
+								title: video.name,
+								fileName: video.id
+							),
+							label: {
+								VideoView(video: video)
+									.padding(
+										.top,
+										6
+									)
+									.padding(
+										.bottom,
+										index == (videos.count - 1) ? 8 : 0
+									)
+							}
+						)
 					}
 				)
 			}).listStyle(InsetGroupedListStyle())
