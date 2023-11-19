@@ -9,17 +9,38 @@ import SwiftUI
 
 struct WatchView: View {
 	
-	let videos: [ AnimalVideo ] = Bundle.main.decode("videos.json")
+	@State var videos: [ AnimalVideo ] = Bundle.main.decode("videos.json")
 	
     var body: some View {
-		ForEach(
-			videos,
-			content: {
-				video in
-				
-				VideoView(video: video)
-			}
-		)
+		NavigationView(content: {
+			List(content: {
+				ForEach(
+					0..<videos.count,
+					id: \.self,
+					content: {
+						index in
+						
+						VideoView(video: videos[ index ])
+							.padding(.top, 6)
+							.padding(.bottom, index == (videos.count - 1) ? 8 : 0)
+					}
+				)
+			}).listStyle(InsetGroupedListStyle())
+				.navigationTitle("Videos")
+				.toolbar {
+					ToolbarItem(
+						placement: .topBarTrailing,
+						content: {
+							Button(action: {
+								videos.shuffle()
+							}, label: {
+								Image(systemName: "arrow.2.squarepath")
+									.fitToScreen()
+							})
+						}
+					)
+				}
+		})
     }
 	
 }

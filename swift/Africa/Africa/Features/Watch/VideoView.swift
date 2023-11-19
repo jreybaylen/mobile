@@ -13,7 +13,7 @@ struct VideoView: View {
 	
     var body: some View {
 		HStack(
-			spacing: 10,
+			spacing: 16,
 			content: {
 				ZStack(content: {
 					Image(video.thumbnail)
