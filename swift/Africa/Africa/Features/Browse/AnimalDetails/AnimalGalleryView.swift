@@ -27,8 +27,7 @@ struct AnimalGalleryView: View {
 								image in
 								
 								Image(image)
-									.resizable()
-									.scaledToFit()
+									.fitToScreen()
 									.frame(height: 200)
 									.clipShape(RoundedRectangle(cornerRadius: 12))
 							}
@@ -42,5 +41,5 @@ struct AnimalGalleryView: View {
 }
 
 #Preview {
-	AnimalGalleryView(animal: TestAnimalData)
+	AnimalGalleryView(animal: TestAnimalInfo)
 }

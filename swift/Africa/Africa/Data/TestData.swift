@@ -5,7 +5,13 @@
 //  Created by John Rey on 11/19/23.
 //
 
-let TestAnimalData: Animal = Animal(
+let TestAnimalVideo: AnimalVideo = AnimalVideo(
+	id: "cheetah",
+	name: "Cheetah",
+	headline: "Cheetah walking in the savannah"
+)
+
+let TestAnimalInfo: Animal = Animal(
 	id: "lion",
 	name: "Lion",
 	headline: "The world's most social felines, lions roam the savannas and grasslands of the African continent, hunting cooperatively and raising cubs in prides. ",

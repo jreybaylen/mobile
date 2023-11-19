@@ -9,8 +9,17 @@ import SwiftUI
 
 struct WatchView: View {
 	
+	let videos: [ AnimalVideo ] = Bundle.main.decode("videos.json")
+	
     var body: some View {
-        Text("Watch View")
+		ForEach(
+			videos,
+			content: {
+				video in
+				
+				VideoView(video: video)
+			}
+		)
     }
 	
 }

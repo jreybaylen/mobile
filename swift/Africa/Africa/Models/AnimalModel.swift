@@ -5,8 +5,6 @@
 //  Created by John Rey on 11/18/23.
 //
 
-import Foundation
-
 struct Animal: Codable, Identifiable {
 	
 	let id: String

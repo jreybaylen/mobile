@@ -35,5 +35,5 @@ struct AnimalFactsView: View {
 }
 
 #Preview {
-    AnimalFactsView(animal: TestAnimalData)
+    AnimalFactsView(animal: TestAnimalInfo)
 }

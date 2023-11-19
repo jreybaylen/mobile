@@ -20,8 +20,7 @@ struct AnimalDetailsView: View {
 					spacing: 20,
 					content: {
 						Image(animal.image)
-							.resizable()
-							.scaledToFit()
+							.fitToScreen()
 						
 						Text(animal.name.uppercased())
 							.font(.largeTitle)
@@ -99,6 +98,6 @@ struct AnimalDetailsView: View {
 
 #Preview {
 	NavigationView(content: {
-		AnimalDetailsView(animal: TestAnimalData)
+		AnimalDetailsView(animal: TestAnimalInfo)
 	})
 }

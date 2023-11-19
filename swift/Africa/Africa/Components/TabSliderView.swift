@@ -19,8 +19,7 @@ struct TabSliderView: View {
 					image in
 					
 					Image(image.name)
-						.resizable()
-						.scaledToFill()
+						.fillToScreen()
 				}
 			)
 		}).tabViewStyle(PageTabViewStyle())

@@ -19,8 +19,7 @@ struct ImageWithDescriptionView: View {
 			spacing: 16,
 			content: {
 				Image(image)
-					.resizable()
-					.scaledToFill()
+					.fillToScreen()
 					.frame(
 						width: 90,
 						height: 90
