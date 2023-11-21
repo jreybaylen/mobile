@@ -42,6 +42,61 @@ struct MapView: View {
 					}
 				)
 			}
+		).overlay(
+			HStack(
+				alignment: .center,
+				spacing: 12,
+				content: {
+					Image("compass")
+						.fitToScreen()
+						.frame(
+							width: 48,
+							height: 48,
+							alignment: .center
+						)
+					
+					VStack(
+						alignment: .leading,
+						spacing: 3,
+						content: {
+							HStack(content: {
+								Text("Latitude:")
+									.foregroundColor(.accentColor)
+									.font(.footnote)
+									.bold()
+								
+								Spacer()
+								
+								Text("\(region.center.latitude)")
+									.foregroundColor(.white)
+									.font(.footnote)
+							})
+							
+							HStack(content: {
+								Text("Longitude:")
+									.font(.footnote)
+									.foregroundColor(.accentColor)
+									.bold()
+								
+								Spacer()
+								
+								Text("\(region.center.longitude)")
+									.font(.footnote)
+									.foregroundColor(.white)
+							})
+						}
+					)
+				}
+			).padding(.vertical, 12)
+				.padding(.horizontal, 16)
+				.background(
+					Color
+						.black
+						.clipShape(RoundedRectangle(cornerRadius: 8))
+						.opacity(0.6)
+				)
+				.padding(),
+			alignment: .top
 		)
     }
 	
