@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DC5225C42B0CEE8800687654 /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC5225C32B0CEE8800687654 /* Stickers.xcassets */; };
 		DC5225C82B0CEE8800687654 /* AfricaSticker.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = DC5225C12B0CEE8700687654 /* AfricaSticker.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DC5F32112B0D1EAC00E3927B /* AnimalsGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5F32102B0D1EAC00E3927B /* AnimalsGridView.swift */; };
 		DC722FF22B0A76C400CC0E01 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC722FF12B0A76C400CC0E01 /* VideoPlayerView.swift */; };
 		DC722FF52B0A77D800CC0E01 /* VideoPlayerUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC722FF42B0A77D800CC0E01 /* VideoPlayerUtil.swift */; };
 		DC722FF72B0A7DC000CC0E01 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC722FF62B0A7DC000CC0E01 /* LocationModel.swift */; };
@@ -102,6 +103,7 @@
 		DC5225C12B0CEE8700687654 /* AfricaSticker.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AfricaSticker.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC5225C32B0CEE8800687654 /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
 		DC5225C52B0CEE8800687654 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC5F32102B0D1EAC00E3927B /* AnimalsGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsGridView.swift; sourceTree = "<group>"; };
 		DC722FF12B0A76C400CC0E01 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
 		DC722FF42B0A77D800CC0E01 /* VideoPlayerUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerUtil.swift; sourceTree = "<group>"; };
 		DC722FF62B0A7DC000CC0E01 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
@@ -353,6 +355,7 @@
 				DC8F03092B08B01000D7A385 /* BrowseView.swift */,
 				DC940A0B2B09082E00F70064 /* AnimalsCoverView.swift */,
 				DC940A092B0907FD00F70064 /* AnimalsView.swift */,
+				DC5F32102B0D1EAC00E3927B /* AnimalsGridView.swift */,
 			);
 			path = Browse;
 			sourceTree = "<group>";
@@ -591,6 +594,7 @@
 				DC8F030A2B08B01000D7A385 /* BrowseView.swift in Sources */,
 				DC940A242B09233100F70064 /* TestData.swift in Sources */,
 				DC940A0A2B0907FD00F70064 /* AnimalsView.swift in Sources */,
+				DC5F32112B0D1EAC00E3927B /* AnimalsGridView.swift in Sources */,
 				DC7441FE2B0C9426008829BB /* MapView.swift in Sources */,
 				DC722FF22B0A76C400CC0E01 /* VideoPlayerView.swift in Sources */,
 				DC7442002B0C98AD008829BB /* MapAnnotationView.swift in Sources */,
@@ -651,7 +655,7 @@
 				INFOPLIST_FILE = AfricaSticker/Info.plist;
 				INFOPLIST_KEY_NSStickerSharingLevel = OS;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jreybaylen.Africa.AfricaSticker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -671,7 +675,7 @@
 				INFOPLIST_FILE = AfricaSticker/Info.plist;
 				INFOPLIST_KEY_NSStickerSharingLevel = OS;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jreybaylen.Africa.AfricaSticker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -875,7 +879,7 @@
 				DEVELOPMENT_TEAM = LL2474LCV3;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jreybaylen.AfricaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -895,7 +899,7 @@
 				DEVELOPMENT_TEAM = LL2474LCV3;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jreybaylen.AfricaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -913,7 +917,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LL2474LCV3;
 				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jreybaylen.AfricaUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -931,7 +935,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LL2474LCV3;
 				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jreybaylen.AfricaUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;

@@ -9,30 +9,34 @@ import SwiftUI
 
 struct AnimalsView: View {
 	
-	private let animals: [ Animal ] = Bundle.main.decode("animals.json")
+	let animals: [ Animal ]
 	
     var body: some View {
-		ForEach(
-			animals,
-			content: {
-				animal in
-				
-				NavigationLink(
-					destination: AnimalDetailsView(animal: animal),
-					label: {
-						ImageWithDescriptionView(
-							image: animal.image,
-							title: animal.name,
-							description: animal.headline
-						)
-					}
-				)
-			}
-		)
+		List(content: {
+			AnimalsCoverView()
+			 
+			ForEach(
+				animals,
+				content: {
+					animal in
+					
+					NavigationLink(
+						destination: AnimalDetailsView(animal: animal),
+						label: {
+							ImageWithDescriptionView(
+								image: animal.image,
+								title: animal.name,
+								description: animal.headline
+							)
+						}
+					)
+				}
+			)
+		 })
     }
 	
 }
 
 #Preview {
-    AnimalsView()
+    AnimalsView(animals: [ TestAnimalInfo ])
 }
