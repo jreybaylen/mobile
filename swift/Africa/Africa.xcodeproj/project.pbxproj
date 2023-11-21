@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		DC722FF22B0A76C400CC0E01 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC722FF12B0A76C400CC0E01 /* VideoPlayerView.swift */; };
 		DC722FF52B0A77D800CC0E01 /* VideoPlayerUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC722FF42B0A77D800CC0E01 /* VideoPlayerUtil.swift */; };
+		DC722FF72B0A7DC000CC0E01 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC722FF62B0A7DC000CC0E01 /* LocationModel.swift */; };
+		DC7441FE2B0C9426008829BB /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7441FD2B0C9426008829BB /* MapView.swift */; };
 		DC7619252B08A4D50064AC5E /* AfricaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7619242B08A4D50064AC5E /* AfricaApp.swift */; };
 		DC7619292B08A4D60064AC5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC7619282B08A4D60064AC5E /* Assets.xcassets */; };
 		DC76192C2B08A4D60064AC5E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC76192B2B08A4D60064AC5E /* Preview Assets.xcassets */; };
@@ -74,6 +76,8 @@
 /* Begin PBXFileReference section */
 		DC722FF12B0A76C400CC0E01 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
 		DC722FF42B0A77D800CC0E01 /* VideoPlayerUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerUtil.swift; sourceTree = "<group>"; };
+		DC722FF62B0A7DC000CC0E01 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
+		DC7441FD2B0C9426008829BB /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		DC7619212B08A4D50064AC5E /* Africa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Africa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC7619242B08A4D50064AC5E /* AfricaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfricaApp.swift; sourceTree = "<group>"; };
 		DC7619282B08A4D60064AC5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -251,8 +255,8 @@
 				DC940A232B09233100F70064 /* TestData.swift */,
 				DC76196A2B08A8FA0064AC5E /* animals.json */,
 				DC7619682B08A8FA0064AC5E /* covers.json */,
-				DC7619672B08A8FA0064AC5E /* locations.json */,
 				DC7619692B08A8FA0064AC5E /* videos.json */,
+				DC7619672B08A8FA0064AC5E /* locations.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -260,9 +264,9 @@
 		DC7619712B08AB1E0064AC5E /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				DC9409F82B08D71500F70064 /* Location */,
 				DC8F03082B08B00600D7A385 /* Browse */,
 				DC8F03042B08AF5300D7A385 /* Watch */,
+				DC9409F82B08D71500F70064 /* Location */,
 				DC7619792B08ABCB0064AC5E /* Gallery */,
 			);
 			path = Features;
@@ -314,6 +318,7 @@
 			isa = PBXGroup;
 			children = (
 				DC9409F92B08D72000F70064 /* LocationView.swift */,
+				DC7441FD2B0C9426008829BB /* MapView.swift */,
 			);
 			path = Location;
 			sourceTree = "<group>";
@@ -324,6 +329,7 @@
 				DC9409FE2B08DAE900F70064 /* ImageSliderModel.swift */,
 				DC940A072B08EDD600F70064 /* AnimalModel.swift */,
 				DC856DC92B0A644C00B47DC9 /* AnimalVideoModel.swift */,
+				DC722FF62B0A7DC000CC0E01 /* LocationModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -495,6 +501,7 @@
 				DC940A042B08EAE600F70064 /* ImageWithDescriptionView.swift in Sources */,
 				DC9409FF2B08DAE900F70064 /* ImageSliderModel.swift in Sources */,
 				DC9409FA2B08D72000F70064 /* LocationView.swift in Sources */,
+				DC722FF72B0A7DC000CC0E01 /* LocationModel.swift in Sources */,
 				DC940A2A2B092E2300F70064 /* WebsiteLinkView.swift in Sources */,
 				DC940A112B0909E700F70064 /* AnimalDetailsView.swift in Sources */,
 				DC940A282B09270300F70064 /* IconWithLabelView.swift in Sources */,
@@ -511,6 +518,7 @@
 				DC8F030A2B08B01000D7A385 /* BrowseView.swift in Sources */,
 				DC940A242B09233100F70064 /* TestData.swift in Sources */,
 				DC940A0A2B0907FD00F70064 /* AnimalsView.swift in Sources */,
+				DC7441FE2B0C9426008829BB /* MapView.swift in Sources */,
 				DC722FF22B0A76C400CC0E01 /* VideoPlayerView.swift in Sources */,
 				DC76197B2B08ABF00064AC5E /* GalleryView.swift in Sources */,
 				DC7619252B08A4D50064AC5E /* AfricaApp.swift in Sources */,
