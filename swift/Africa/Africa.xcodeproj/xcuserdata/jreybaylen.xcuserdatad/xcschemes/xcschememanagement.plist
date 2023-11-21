@@ -7,12 +7,20 @@
 		<key>Africa.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
-		</dict>
-		<key>AfricaSticker.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
 			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>DC5225C02B0CEE8700687654</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DC7619202B08A4D50064AC5E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

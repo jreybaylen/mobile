@@ -32,6 +32,9 @@ struct AnimalsView: View {
 					)
 				}
 			)
+			
+			CopyrightView()
+				.modifier(CenterModifier())
 		 })
     }
 	
