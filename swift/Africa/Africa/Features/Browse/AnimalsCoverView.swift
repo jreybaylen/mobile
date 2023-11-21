@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AnimalsCoverView: View {
 	
-	let coverImages: [ CoverImage ] = Bundle.main.decode("covers.json")
+	private let coverImages: [ CoverImage ] = Bundle.main.decode("covers.json")
 	
     var body: some View {
 		TabSliderView(images: coverImages)

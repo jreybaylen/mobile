@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AnimalsView: View {
 	
-	let animals: [ Animal ] = Bundle.main.decode("animals.json")
+	private let animals: [ Animal ] = Bundle.main.decode("animals.json")
 	
     var body: some View {
 		ForEach(

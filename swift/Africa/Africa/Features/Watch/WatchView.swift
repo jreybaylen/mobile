@@ -9,7 +9,7 @@ import SwiftUI
 
 struct WatchView: View {
 	
-	@State var videos: [ AnimalVideo ] = Bundle.main.decode("videos.json")
+	@State private var videos: [ AnimalVideo ] = Bundle.main.decode("videos.json")
 	
     var body: some View {
 		NavigationView(content: {
