@@ -21,6 +21,7 @@ struct WatchView: View {
 						index in
 						
 						let video = videos[ index ]
+						let isLast = index == (videos.count - 1)
 						
 						NavigationLink(
 							destination: VideoPlayerView(
@@ -30,12 +31,8 @@ struct WatchView: View {
 							label: {
 								VideoView(video: video)
 									.padding(
-										.top,
-										6
-									)
-									.padding(
-										.bottom,
-										index == (videos.count - 1) ? 8 : 0
+										isLast ? .bottom : .top,
+										isLast ? 8 : 6
 									)
 							}
 						)

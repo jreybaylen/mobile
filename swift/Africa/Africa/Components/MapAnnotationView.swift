@@ -24,7 +24,10 @@ struct MapAnnotationView: View {
 				)
 			
 			Circle()
-				.stroke(Color.accentColor, lineWidth: 2)
+				.stroke(
+					Color.accentColor,
+					lineWidth: 2
+				)
 				.frame(
 					width: 52,
 					height: 52,
