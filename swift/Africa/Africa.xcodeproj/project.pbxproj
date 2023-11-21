@@ -59,6 +59,8 @@
 		DC940A262B0926F100F70064 /* MapKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC940A252B0926F100F70064 /* MapKitView.swift */; };
 		DC940A282B09270300F70064 /* IconWithLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC940A272B09270300F70064 /* IconWithLabelView.swift */; };
 		DC940A2A2B092E2300F70064 /* WebsiteLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC940A292B092E2300F70064 /* WebsiteLinkView.swift */; };
+		DCB740D82B0D280A001EE663 /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCB740D72B0D280A001EE663 /* Stickers.xcassets */; };
+		DCB740DC2B0D280A001EE663 /* AfricaSticker.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = DCB740D52B0D2809001EE663 /* AfricaSticker.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,13 @@
 			remoteGlobalIDString = DC7619202B08A4D50064AC5E;
 			remoteInfo = Africa;
 		};
+		DCB740DA2B0D280A001EE663 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC7619192B08A4D50064AC5E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DCB740D42B0D2809001EE663;
+			remoteInfo = AfricaSticker;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -85,6 +94,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				DCB740DC2B0D280A001EE663 /* AfricaSticker.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,6 +158,9 @@
 		DC940A252B0926F100F70064 /* MapKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitView.swift; sourceTree = "<group>"; };
 		DC940A272B09270300F70064 /* IconWithLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconWithLabelView.swift; sourceTree = "<group>"; };
 		DC940A292B092E2300F70064 /* WebsiteLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsiteLinkView.swift; sourceTree = "<group>"; };
+		DCB740D52B0D2809001EE663 /* AfricaSticker.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AfricaSticker.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCB740D72B0D280A001EE663 /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
+		DCB740D92B0D280A001EE663 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				DC7619232B08A4D50064AC5E /* Africa */,
+				DCB740D62B0D2809001EE663 /* AfricaSticker */,
 				DC7619342B08A4D60064AC5E /* AfricaTests */,
 				DC76193E2B08A4D60064AC5E /* AfricaUITests */,
 				DC7619222B08A4D50064AC5E /* Products */,
@@ -207,6 +221,7 @@
 				DC7619212B08A4D50064AC5E /* Africa.app */,
 				DC7619312B08A4D60064AC5E /* AfricaTests.xctest */,
 				DC76193B2B08A4D60064AC5E /* AfricaUITests.xctest */,
+				DCB740D52B0D2809001EE663 /* AfricaSticker.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -389,6 +404,15 @@
 			path = AnimalDetails;
 			sourceTree = "<group>";
 		};
+		DCB740D62B0D2809001EE663 /* AfricaSticker */ = {
+			isa = PBXGroup;
+			children = (
+				DCB740D72B0D280A001EE663 /* Stickers.xcassets */,
+				DCB740D92B0D280A001EE663 /* Info.plist */,
+			);
+			path = AfricaSticker;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -404,6 +428,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				DCB740DB2B0D280A001EE663 /* PBXTargetDependency */,
 			);
 			name = Africa;
 			productName = Africa;
@@ -446,6 +471,21 @@
 			productReference = DC76193B2B08A4D60064AC5E /* AfricaUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		DCB740D42B0D2809001EE663 /* AfricaSticker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCB740DD2B0D280A001EE663 /* Build configuration list for PBXNativeTarget "AfricaSticker" */;
+			buildPhases = (
+				DCB740D32B0D2809001EE663 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AfricaSticker;
+			productName = AfricaSticker;
+			productReference = DCB740D52B0D2809001EE663 /* AfricaSticker.appex */;
+			productType = "com.apple.product-type.app-extension.messages-sticker-pack";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -467,6 +507,9 @@
 						CreatedOnToolsVersion = 15.0.1;
 						TestTargetID = DC7619202B08A4D50064AC5E;
 					};
+					DCB740D42B0D2809001EE663 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
 				};
 			};
 			buildConfigurationList = DC76191C2B08A4D50064AC5E /* Build configuration list for PBXProject "Africa" */;
@@ -483,6 +526,7 @@
 			projectRoot = "";
 			targets = (
 				DC7619202B08A4D50064AC5E /* Africa */,
+				DCB740D42B0D2809001EE663 /* AfricaSticker */,
 				DC7619302B08A4D60064AC5E /* AfricaTests */,
 				DC76193A2B08A4D60064AC5E /* AfricaUITests */,
 			);
@@ -524,6 +568,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCB740D32B0D2809001EE663 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCB740D82B0D280A001EE663 /* Stickers.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,6 +651,11 @@
 			isa = PBXTargetDependency;
 			target = DC7619202B08A4D50064AC5E /* Africa */;
 			targetProxy = DC76193C2B08A4D60064AC5E /* PBXContainerItemProxy */;
+		};
+		DCB740DB2B0D280A001EE663 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DCB740D42B0D2809001EE663 /* AfricaSticker */;
+			targetProxy = DCB740DA2B0D280A001EE663 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -864,6 +921,46 @@
 			};
 			name = Release;
 		};
+		DCB740DE2B0D280A001EE663 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LL2474LCV3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AfricaSticker/Info.plist;
+				INFOPLIST_KEY_NSStickerSharingLevel = OS;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jreybaylen.Africa.AfricaSticker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DCB740DF2B0D280A001EE663 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LL2474LCV3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AfricaSticker/Info.plist;
+				INFOPLIST_KEY_NSStickerSharingLevel = OS;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jreybaylen.Africa.AfricaSticker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -899,6 +996,15 @@
 			buildConfigurations = (
 				DC76194C2B08A4D60064AC5E /* Debug */,
 				DC76194D2B08A4D60064AC5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DCB740DD2B0D280A001EE663 /* Build configuration list for PBXNativeTarget "AfricaSticker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCB740DE2B0D280A001EE663 /* Debug */,
+				DCB740DF2B0D280A001EE663 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
