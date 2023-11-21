@@ -10,6 +10,8 @@ import MapKit
 
 struct MapView: View {
 	
+	let locations: [ Location ] = Bundle.main.decode("locations.json")
+	
 	@State private var region: MKCoordinateRegion = {
 		let coordinates = CLLocationCoordinate2D(
 			latitude: 6.600286,
@@ -26,37 +28,17 @@ struct MapView: View {
 		)
 	}()
 	
-	let locations: [ Location ] = Bundle.main.decode("locations.json")
-	
     var body: some View {
-//		Map(coordinateRegion: $region)
-		
 		Map(
 			coordinateRegion: $region,
 			annotationItems: locations,
 			annotationContent: {
 				map in
 				
-//				MapPin(
-//					coordinate: map.location,
-//					tint: .accentColor
-//				)
-				
-//				MapMarker(
-//					coordinate: map.location,
-//					tint: .accentColor
-//				)
-				
 				MapAnnotation(
 					coordinate: map.location,
 					content: {
-						Image("logo")
-							.fitToScreen()
-							.frame(
-								width: 32,
-								height: 32,
-								alignment: .center
-							)
+						MapAnnotationView(location: map)
 					}
 				)
 			}

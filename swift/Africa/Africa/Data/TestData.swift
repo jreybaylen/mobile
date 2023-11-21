@@ -5,6 +5,14 @@
 //  Created by John Rey on 11/19/23.
 //
 
+let TestAnimalLocation: Location = Location(
+	id: "serengeti",
+	name: "Serengeti National Park",
+	image: "map-serengeti",
+	latitude: -2.3333333,
+	longitude: 34.8333333
+)
+
 let TestAnimalVideo: AnimalVideo = AnimalVideo(
 	id: "cheetah",
 	name: "Cheetah",
