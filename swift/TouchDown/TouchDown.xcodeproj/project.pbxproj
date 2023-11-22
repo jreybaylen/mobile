@@ -18,6 +18,9 @@
 		DC292C992B0DF3A300BADFE1 /* product.json in Resources */ = {isa = PBXBuildFile; fileRef = DC292C952B0DF3A300BADFE1 /* product.json */; };
 		DC292C9A2B0DF3A300BADFE1 /* player.json in Resources */ = {isa = PBXBuildFile; fileRef = DC292C962B0DF3A300BADFE1 /* player.json */; };
 		DC292C9D2B0DF3C400BADFE1 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC292C9C2B0DF3C400BADFE1 /* MainScreen.swift */; };
+		DC6ADF582B0E3B2C002C4054 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6ADF572B0E3B2C002C4054 /* FooterView.swift */; };
+		DC6ADF5A2B0E3B9C002C4054 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6ADF592B0E3B9C002C4054 /* ImageExtension.swift */; };
+		DC6ADF5E2B0E3EFD002C4054 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6ADF5D2B0E3EFD002C4054 /* HomeScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		DC292C962B0DF3A300BADFE1 /* player.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = player.json; sourceTree = "<group>"; };
 		DC292C9C2B0DF3C400BADFE1 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		DC292C9F2B0DF49A00BADFE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		DC6ADF572B0E3B2C002C4054 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
+		DC6ADF592B0E3B9C002C4054 /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
+		DC6ADF5D2B0E3EFD002C4054 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +178,7 @@
 		DC292CA02B0DF57100BADFE1 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				DC6ADF572B0E3B2C002C4054 /* FooterView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -179,6 +186,7 @@
 		DC292CA22B0DF58E00BADFE1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				DC6ADF592B0E3B9C002C4054 /* ImageExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -193,6 +201,7 @@
 		DC292CA42B0DF5F600BADFE1 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				DC6ADF5D2B0E3EFD002C4054 /* HomeScreen.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -331,8 +340,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC6ADF582B0E3B2C002C4054 /* FooterView.swift in Sources */,
+				DC6ADF5E2B0E3EFD002C4054 /* HomeScreen.swift in Sources */,
 				DC292C9D2B0DF3C400BADFE1 /* MainScreen.swift in Sources */,
 				DC292C692B0DF17900BADFE1 /* TouchDownApp.swift in Sources */,
+				DC6ADF5A2B0E3B9C002C4054 /* ImageExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

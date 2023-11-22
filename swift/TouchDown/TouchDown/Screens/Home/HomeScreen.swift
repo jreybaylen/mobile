@@ -1,5 +1,5 @@
 //
-//  MainScreen.swift
+//  HomeScreen.swift
 //  TouchDown
 //
 //  Created by John Rey on 11/22/23.
@@ -7,12 +7,16 @@
 
 import SwiftUI
 
-struct MainScreen: View {
+struct HomeScreen: View {
     var body: some View {
-        HomeScreen()
+		VStack(content: {
+			Spacer()
+			
+			FooterView()
+		})
     }
 }
 
 #Preview {
-    MainScreen()
+    HomeScreen()
 }
