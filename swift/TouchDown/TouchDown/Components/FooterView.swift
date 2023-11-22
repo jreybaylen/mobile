@@ -29,6 +29,10 @@ struct FooterView: View {
 					.multilineTextAlignment(.center)
 			}
 		).opacity(0.4)
+			.padding(
+				.bottom,
+				32
+			)
     }
 }
 

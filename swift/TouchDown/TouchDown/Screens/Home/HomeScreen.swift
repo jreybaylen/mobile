@@ -9,11 +9,15 @@ import SwiftUI
 
 struct HomeScreen: View {
     var body: some View {
-		VStack(content: {
-			Spacer()
-			
-			FooterView()
-		})
+		ZStack {
+			VStack(content: {
+				NavigationView()
+				
+				Spacer()
+				
+				FooterView()
+			}).background(Color.appBackground.ignoresSafeArea())
+		}.ignoresSafeArea()
     }
 }
 
