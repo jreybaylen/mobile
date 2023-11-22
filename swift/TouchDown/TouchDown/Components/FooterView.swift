@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct FooterView: View {
+	
     var body: some View {
 		VStack(
 			alignment: .center,
 			spacing: 12,
 			content: {
-				Text("We offer the most cutting edge, \ncomfortable, lightweight, and durable \nfootball helmets \nin the market at affordable prices.")
+				Text("We offer the most cutting edge, \ncomfortable, lightweight, and durable \nfootball helmets in the market \nat affordable prices.")
 					.font(.body)
 					.multilineTextAlignment(.center)
 				
@@ -34,6 +35,7 @@ struct FooterView: View {
 				32
 			)
     }
+	
 }
 
 #Preview {

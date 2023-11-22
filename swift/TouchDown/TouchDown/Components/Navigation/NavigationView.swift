@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct NavigationView: View {
+	
     var body: some View {
 		HStack(content: {
 			Image(systemName: "magnifyingglass")
@@ -59,6 +60,7 @@ struct NavigationView: View {
 				)
 			)
     }
+	
 }
 
 #Preview {

@@ -8,17 +8,27 @@
 import SwiftUI
 
 struct HomeScreen: View {
-    var body: some View {
-		ZStack {
-			VStack(content: {
-				NavigationView()
-				
-				Spacer()
-				
-				FooterView()
-			}).background(Color.appBackground.ignoresSafeArea())
-		}.ignoresSafeArea()
-    }
+	
+	var body: some View {
+		ZStack(content: {
+			VStack(
+				spacing: 0,
+				content: {
+					NavigationView()
+					
+					ScrollView(
+						.vertical,
+						showsIndicators: false,
+						content: {
+							FeaturedPlayersView()
+							
+							FooterView()
+						}
+					)
+				}
+			).background(Color.appBackground.ignoresSafeArea())
+		}).ignoresSafeArea()
+	}
 }
 
 #Preview {
