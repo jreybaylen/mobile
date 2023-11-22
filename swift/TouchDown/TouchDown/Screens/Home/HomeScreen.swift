@@ -22,6 +22,8 @@ struct HomeScreen: View {
 						content: {
 							FeaturedPlayersView()
 							
+							CategoriesView()
+							
 							FooterView()
 						}
 					)
