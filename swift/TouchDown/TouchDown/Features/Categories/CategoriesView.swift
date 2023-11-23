@@ -17,7 +17,7 @@ struct CategoriesView: View {
 				LazyHGrid(
 					rows: Constants.GRID_LAYOUT,
 					alignment: .center,
-					spacing: Constants.GRID_COLUMNS,
+					spacing: Constants.GRID_SPACE,
 					pinnedViews: [],
 					content: {
 						Section(

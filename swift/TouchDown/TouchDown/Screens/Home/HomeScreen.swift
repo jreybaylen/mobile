@@ -24,6 +24,8 @@ struct HomeScreen: View {
 							
 							CategoriesView()
 							
+							ProductsView()
+							
 							FooterView()
 						}
 					)

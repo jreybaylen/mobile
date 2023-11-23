@@ -26,7 +26,7 @@ struct SectionHeaderView: View {
 				Spacer()
 			}
 		).frame(width: 85)
-			.background(Color.gray.cornerRadius(12).opacity(0.4))
+			.background(Color.gray.cornerRadius(Constants.BORDER_RADIUS).opacity(0.4))
     }
 	
 }

@@ -15,7 +15,7 @@ struct PlayerView: View {
 		Image(player.image)
 			.fitScreen()
 			.clipShape(
-				RoundedRectangle(cornerRadius: 12)
+				RoundedRectangle(cornerRadius: Constants.BORDER_RADIUS)
 			)
 			.padding(
 				EdgeInsets(

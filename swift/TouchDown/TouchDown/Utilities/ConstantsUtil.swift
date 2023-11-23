@@ -13,10 +13,14 @@ struct Constants {
 	
 	static let CATEGORIES: [ Category ] = Bundle.main.decode("categories.json")
 	
-	static let GRID_COLUMNS: Double = 12
+	static let PRODUCTS: [ Product ] = Bundle.main.decode("products.json")
+	
+	static let GRID_SPACE: Double = 10
 	static let GRID_LAYOUT: [ GridItem ] = Array(
 		repeating: GridItem(.flexible()),
 		count: 2
 	)
+	
+	static let BORDER_RADIUS: CGFloat = 16
 	
 }

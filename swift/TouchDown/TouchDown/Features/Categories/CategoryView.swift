@@ -36,9 +36,13 @@ struct CategoryView: View {
 						Spacer()
 					}
 				).padding()
-					.background(Color.white.clipShape(RoundedRectangle(cornerRadius: 12)))
 					.background(
-						RoundedRectangle(cornerRadius: 12)
+						Color.white.clipShape(
+							RoundedRectangle(cornerRadius: Constants.BORDER_RADIUS)
+						)
+					)
+					.background(
+						RoundedRectangle(cornerRadius: Constants.BORDER_RADIUS)
 							.stroke(
 								Color.gray,
 								lineWidth: 1
