@@ -9,12 +9,31 @@ import SwiftUI
 
 struct DetailsScreen: View {
 	
+	let product: Product
+	
     var body: some View {
-        Text("Hello, World!")
+		VStack(
+			alignment: .leading,
+			spacing: 5,
+			content: {
+				DetailsNavigationView()
+				
+				DetailsBannerView(product: product)
+				
+				Spacer()
+			}
+		).ignoresSafeArea()
+			.background(
+				Color(
+					red: product.red,
+					green: product.green,
+					blue: product.blue
+				).ignoresSafeArea()
+			)
     }
 	
 }
 
 #Preview {
-    DetailsScreen()
+	DetailsScreen(product: TestProduct)
 }

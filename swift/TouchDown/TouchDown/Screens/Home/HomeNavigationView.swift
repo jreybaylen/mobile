@@ -58,20 +58,7 @@ struct HomeNavigationView: View {
 						y: -10
 					)
 			}
-		}).padding(.bottom)
-			.padding(
-				.top,
-				UIApplication
-					.shared
-					.windows
-					.first?
-					.safeAreaInsets
-					.top
-			)
-			.padding(
-				.horizontal,
-				16
-			)
+		}).modifier(NavigationOffsetModifier())
 			.background(Color.white)
 			.overlay(
 				Rectangle().stroke(
