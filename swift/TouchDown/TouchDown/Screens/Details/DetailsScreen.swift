@@ -20,9 +20,31 @@ struct DetailsScreen: View {
 				
 				DetailsBannerView(product: product)
 				
-				Spacer()
+				ScrollView(content: {
+					Text(product.description)
+						.font(
+							.system(
+								.body,
+								design: .rounded
+							)
+						)
+						.foregroundColor(.gray)
+						.multilineTextAlignment(.leading)
+				}).padding(
+					.horizontal,
+					16
+				).background(
+					Color
+						.white
+						.clipShape(RadiusShape())
+						.padding(
+							.top,
+							-105
+						)
+				)
 			}
-		).ignoresSafeArea()
+		).zIndex(0)
+			.ignoresSafeArea()
 			.background(
 				Color(
 					red: product.red,

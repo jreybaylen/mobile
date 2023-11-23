@@ -66,10 +66,11 @@ struct DetailsBannerView: View {
 					}
 				})
 			}
-		).padding(
-			.horizontal,
-			16
-		)
+		).zIndex(1)
+			.padding(
+				.horizontal,
+				16
+			)
     }
 	
 }

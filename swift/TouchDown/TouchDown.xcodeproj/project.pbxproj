@@ -44,6 +44,7 @@
 		DC9BB3EF2B0FA78B0049BF09 /* PlayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9BB3EE2B0FA78B0049BF09 /* PlayersView.swift */; };
 		DC9BB3F22B0FA9D70049BF09 /* NavigationOffsetModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9BB3F12B0FA9D70049BF09 /* NavigationOffsetModifier.swift */; };
 		DC9BB3F42B0FABE30049BF09 /* DetailsBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9BB3F32B0FABE30049BF09 /* DetailsBannerView.swift */; };
+		DC9BB3F82B0FB3490049BF09 /* RadiusShapeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9BB3F72B0FB3490049BF09 /* RadiusShapeUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		DC9BB3EE2B0FA78B0049BF09 /* PlayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersView.swift; sourceTree = "<group>"; };
 		DC9BB3F12B0FA9D70049BF09 /* NavigationOffsetModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationOffsetModifier.swift; sourceTree = "<group>"; };
 		DC9BB3F32B0FABE30049BF09 /* DetailsBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsBannerView.swift; sourceTree = "<group>"; };
+		DC9BB3F72B0FB3490049BF09 /* RadiusShapeUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadiusShapeUtil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				DC6ADF742B0E48E2002C4054 /* ConstantsUtil.swift */,
+				DC9BB3F72B0FB3490049BF09 /* RadiusShapeUtil.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -488,6 +491,7 @@
 				DC292C692B0DF17900BADFE1 /* TouchDownApp.swift in Sources */,
 				DC9BB3E02B0F8AFA0049BF09 /* BrandsView.swift in Sources */,
 				DC9BB3E52B0F93270049BF09 /* DetailsScreen.swift in Sources */,
+				DC9BB3F82B0FB3490049BF09 /* RadiusShapeUtil.swift in Sources */,
 				DC8F7D292B0E6CB500C13426 /* SectionHeaderView.swift in Sources */,
 				DC9BB3DB2B0F7F6B0049BF09 /* ProductView.swift in Sources */,
 				DC6ADF752B0E48E2002C4054 /* ConstantsUtil.swift in Sources */,
