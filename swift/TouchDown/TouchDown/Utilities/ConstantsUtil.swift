@@ -15,6 +15,8 @@ struct Constants {
 	
 	static let PRODUCTS: [ Product ] = Bundle.main.decode("products.json")
 	
+	static let BRANDS: [ Brand ] = Bundle.main.decode("brands.json")
+	
 	static let GRID_SPACE: Double = 10
 	static let GRID_LAYOUT: [ GridItem ] = Array(
 		repeating: GridItem(.flexible()),

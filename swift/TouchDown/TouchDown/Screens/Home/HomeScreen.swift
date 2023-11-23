@@ -26,6 +26,8 @@ struct HomeScreen: View {
 							
 							ProductsView()
 							
+							BrandsView()
+							
 							FooterView()
 						}
 					)

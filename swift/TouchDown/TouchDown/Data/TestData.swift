@@ -10,3 +10,5 @@ let TestPlayer = Constants.PLAYERS[0]
 let TestCategory = Constants.CATEGORIES[0]
 
 let TestProduct = Constants.PRODUCTS[0]
+
+let TestBrand = Constants.BRANDS[0]

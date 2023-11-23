@@ -12,35 +12,43 @@ struct ProductView: View {
 	let product: Product
 	
     var body: some View {
-		VStack(
-			alignment: .leading,
-			spacing: 6,
-			content: {
-				ZStack(content: {
-					Image(product.image)
-						.fitScreen()
-						.padding(10)
-				}).background(
-					Color(
-						red: product.red,
-						green: product.green,
-						blue: product.blue
-					)
-				).clipShape(
-					RoundedRectangle(cornerRadius: Constants.BORDER_RADIUS)
+		Button(
+			action: {
+			
+			},
+			label: {
+				VStack(
+					alignment: .leading,
+					spacing: 6,
+					content: {
+						ZStack(content: {
+							Image(product.image)
+								.fitScreen()
+								.padding(10)
+						}).background(
+							Color(
+								red: product.red,
+								green: product.green,
+								blue: product.blue
+							)
+						).clipShape(
+							RoundedRectangle(cornerRadius: Constants.BORDER_RADIUS)
+						)
+						
+						Text(product.name.capitalized)
+							.font(.title3)
+							.fontWeight(.black)
+							.foregroundColor(.black)
+							.padding(
+								.bottom,
+								-5
+							)
+						
+						Text(product.formattedPrice)
+							.fontWeight(.semibold)
+							.foregroundColor(.gray)
+					}
 				)
-				
-				Text(product.name.capitalized)
-					.font(.title3)
-					.fontWeight(.black)
-					.padding(
-						.bottom,
-						-5
-					)
-				
-				Text(product.formattedPrice)
-					.fontWeight(.semibold)
-					.foregroundColor(.gray)
 			}
 		).padding(
 			.bottom,
