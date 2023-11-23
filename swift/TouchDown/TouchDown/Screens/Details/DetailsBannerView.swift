@@ -11,8 +11,6 @@ struct DetailsBannerView: View {
 	
 	@State private var isAnimating = false
 	
-	let product: Product
-	
     var body: some View {
 		VStack(
 			alignment: .leading,
@@ -23,7 +21,7 @@ struct DetailsBannerView: View {
 					content: {
 						Text("Protective Gear")
 					
-						Text(product.name)
+						Text(TestProduct.name)
 							.font(.largeTitle)
 							.fontWeight(.black)
 					}
@@ -44,7 +42,7 @@ struct DetailsBannerView: View {
 								Text("Price")
 									.fontWeight(.semibold)
 								
-								Text(product.formattedPrice)
+								Text(TestProduct.formattedPrice)
 									.font(.largeTitle)
 									.fontWeight(.black)
 									.scaleEffect(
@@ -56,7 +54,7 @@ struct DetailsBannerView: View {
 						
 						Spacer()
 						
-						Image(product.image)
+						Image(TestProduct.image)
 							.fitScreen()
 							.offset(y: isAnimating ? 0 : -35)
 					}
@@ -83,6 +81,6 @@ struct DetailsBannerView: View {
 			blue: TestProduct.blue
 		).ignoresSafeArea()
 		
-		DetailsBannerView(product: TestProduct)
+		DetailsBannerView()
 	})
 }

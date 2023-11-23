@@ -45,6 +45,7 @@
 		DC9BB3F22B0FA9D70049BF09 /* NavigationOffsetModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9BB3F12B0FA9D70049BF09 /* NavigationOffsetModifier.swift */; };
 		DC9BB3F42B0FABE30049BF09 /* DetailsBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9BB3F32B0FABE30049BF09 /* DetailsBannerView.swift */; };
 		DC9BB3F82B0FB3490049BF09 /* RadiusShapeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9BB3F72B0FB3490049BF09 /* RadiusShapeUtil.swift */; };
+		DC9BB3FA2B0FB53E0049BF09 /* DetailsDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9BB3F92B0FB53E0049BF09 /* DetailsDescriptionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,7 @@
 		DC9BB3F12B0FA9D70049BF09 /* NavigationOffsetModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationOffsetModifier.swift; sourceTree = "<group>"; };
 		DC9BB3F32B0FABE30049BF09 /* DetailsBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsBannerView.swift; sourceTree = "<group>"; };
 		DC9BB3F72B0FB3490049BF09 /* RadiusShapeUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadiusShapeUtil.swift; sourceTree = "<group>"; };
+		DC9BB3F92B0FB53E0049BF09 /* DetailsDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsDescriptionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -310,6 +312,7 @@
 		DC9BB3E32B0F93130049BF09 /* Details */ = {
 			isa = PBXGroup;
 			children = (
+				DC9BB3F92B0FB53E0049BF09 /* DetailsDescriptionView.swift */,
 				DC9BB3F32B0FABE30049BF09 /* DetailsBannerView.swift */,
 				DC9BB3E82B0FA6170049BF09 /* DetailsNavigationView.swift */,
 				DC9BB3E42B0F93270049BF09 /* DetailsScreen.swift */,
@@ -494,6 +497,7 @@
 				DC9BB3F82B0FB3490049BF09 /* RadiusShapeUtil.swift in Sources */,
 				DC8F7D292B0E6CB500C13426 /* SectionHeaderView.swift in Sources */,
 				DC9BB3DB2B0F7F6B0049BF09 /* ProductView.swift in Sources */,
+				DC9BB3FA2B0FB53E0049BF09 /* DetailsDescriptionView.swift in Sources */,
 				DC6ADF752B0E48E2002C4054 /* ConstantsUtil.swift in Sources */,
 				DC9BB3D92B0F7E6B0049BF09 /* ProductModel.swift in Sources */,
 				DC6ADF5A2B0E3B9C002C4054 /* ImageExtension.swift in Sources */,

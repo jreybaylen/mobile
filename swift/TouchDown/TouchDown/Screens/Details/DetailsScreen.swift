@@ -9,8 +9,6 @@ import SwiftUI
 
 struct DetailsScreen: View {
 	
-	let product: Product
-	
     var body: some View {
 		VStack(
 			alignment: .leading,
@@ -18,38 +16,17 @@ struct DetailsScreen: View {
 			content: {
 				DetailsNavigationView()
 				
-				DetailsBannerView(product: product)
+				DetailsBannerView()
 				
-				ScrollView(content: {
-					Text(product.description)
-						.font(
-							.system(
-								.body,
-								design: .rounded
-							)
-						)
-						.foregroundColor(.gray)
-						.multilineTextAlignment(.leading)
-				}).padding(
-					.horizontal,
-					16
-				).background(
-					Color
-						.white
-						.clipShape(RadiusShape())
-						.padding(
-							.top,
-							-105
-						)
-				)
+				DetailsDescriptionView()
 			}
 		).zIndex(0)
 			.ignoresSafeArea()
 			.background(
 				Color(
-					red: product.red,
-					green: product.green,
-					blue: product.blue
+					red: TestProduct.red,
+					green: TestProduct.green,
+					blue: TestProduct.blue
 				).ignoresSafeArea()
 			)
     }
@@ -57,5 +34,5 @@ struct DetailsScreen: View {
 }
 
 #Preview {
-	DetailsScreen(product: TestProduct)
+	DetailsScreen()
 }
