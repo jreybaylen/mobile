@@ -16,9 +16,11 @@ struct BrandView: View {
 			.fitScreen()
 			.padding(6)
 			.background(
-				Color.white.clipShape(
-					RoundedRectangle(cornerRadius: Constants.BORDER_RADIUS)
-				)
+				Color
+					.white
+					.clipShape(
+						RoundedRectangle(cornerRadius: Constants.BORDER_RADIUS)
+					)
 			)
 			.background(
 				RoundedRectangle(cornerRadius: Constants.BORDER_RADIUS)

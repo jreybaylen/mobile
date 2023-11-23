@@ -1,13 +1,13 @@
 //
-//  NavigationView.swift
+//  HomeNavigationView.swift
 //  TouchDown
 //
-//  Created by John Rey on 11/22/23.
+//  Created by John Rey on 11/23/23.
 //
 
 import SwiftUI
 
-struct NavigationView: View {
+struct HomeNavigationView: View {
 	
     var body: some View {
 		HStack(content: {
@@ -20,7 +20,22 @@ struct NavigationView: View {
 			
 			Spacer()
 			
-			NavigationLogoView()
+			HStack(content: {
+				Text("TOUCH")
+					.fontWeight(.black)
+					.font(.title2)
+				
+				Image("logo-dark")
+					.fitScreen()
+					.frame(
+						width: 30,
+						height: 30
+					)
+				
+				Text("DOWN")
+					.fontWeight(.black)
+					.font(.title2)
+			})
 			
 			Spacer()
 			
@@ -46,7 +61,12 @@ struct NavigationView: View {
 		}).padding(.bottom)
 			.padding(
 				.top,
-				UIApplication.shared.windows.first?.safeAreaInsets.top
+				UIApplication
+					.shared
+					.windows
+					.first?
+					.safeAreaInsets
+					.top
 			)
 			.padding(
 				.horizontal,
@@ -55,7 +75,9 @@ struct NavigationView: View {
 			.background(Color.white)
 			.overlay(
 				Rectangle().stroke(
-					Color.gray.opacity(0.2),
+					Color
+						.gray
+						.opacity(0.2),
 					lineWidth: 1
 				)
 			)
@@ -64,5 +86,5 @@ struct NavigationView: View {
 }
 
 #Preview {
-    NavigationView()
+    HomeNavigationView()
 }

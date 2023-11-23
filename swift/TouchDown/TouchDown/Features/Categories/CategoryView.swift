@@ -37,9 +37,11 @@ struct CategoryView: View {
 					}
 				).padding()
 					.background(
-						Color.white.clipShape(
-							RoundedRectangle(cornerRadius: Constants.BORDER_RADIUS)
-						)
+						Color
+							.white
+							.clipShape(
+								RoundedRectangle(cornerRadius: Constants.BORDER_RADIUS)
+							)
 					)
 					.background(
 						RoundedRectangle(cornerRadius: Constants.BORDER_RADIUS)

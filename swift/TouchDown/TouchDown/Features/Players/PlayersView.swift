@@ -1,13 +1,13 @@
 //
-//  FeaturedPlayersView.swift
+//  PlayersView.swift
 //  TouchDown
 //
-//  Created by John Rey on 11/22/23.
+//  Created by John Rey on 11/23/23.
 //
 
 import SwiftUI
 
-struct FeaturedPlayersView: View {
+struct PlayersView: View {
 	
     var body: some View {
 		TabView(content: {
@@ -30,5 +30,5 @@ struct FeaturedPlayersView: View {
 }
 
 #Preview {
-    FeaturedPlayersView()
+    PlayersView()
 }

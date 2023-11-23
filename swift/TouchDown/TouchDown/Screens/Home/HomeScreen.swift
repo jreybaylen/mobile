@@ -14,13 +14,13 @@ struct HomeScreen: View {
 			VStack(
 				spacing: 0,
 				content: {
-					NavigationView()
+					HomeNavigationView()
 					
 					ScrollView(
 						.vertical,
 						showsIndicators: false,
 						content: {
-							FeaturedPlayersView()
+							PlayersView()
 							
 							CategoriesView()
 							
@@ -32,7 +32,11 @@ struct HomeScreen: View {
 						}
 					)
 				}
-			).background(Color.appBackground.ignoresSafeArea())
+			).background(
+				Color
+					.appBackground
+					.ignoresSafeArea()
+			)
 		}).ignoresSafeArea()
 	}
 }
