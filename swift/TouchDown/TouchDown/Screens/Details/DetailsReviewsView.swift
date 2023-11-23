@@ -21,9 +21,9 @@ struct DetailsReviewsView: View {
 			.padding(
 				EdgeInsets(
 					top: -20,
-					leading: 16,
+					leading: 0,
 					bottom: 10,
-					trailing: 16
+					trailing: 0
 				)
 			)
     }

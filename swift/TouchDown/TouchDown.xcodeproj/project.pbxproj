@@ -45,10 +45,10 @@
 		DC9BB3F22B0FA9D70049BF09 /* NavigationOffsetModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9BB3F12B0FA9D70049BF09 /* NavigationOffsetModifier.swift */; };
 		DC9BB3F42B0FABE30049BF09 /* DetailsBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9BB3F32B0FABE30049BF09 /* DetailsBannerView.swift */; };
 		DC9BB3F82B0FB3490049BF09 /* RadiusShapeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9BB3F72B0FB3490049BF09 /* RadiusShapeUtil.swift */; };
-		DC9BB3FA2B0FB53E0049BF09 /* DetailsDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9BB3F92B0FB53E0049BF09 /* DetailsDescriptionView.swift */; };
 		DC9BB3FC2B0FB6A70049BF09 /* RatingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9BB3FB2B0FB6A70049BF09 /* RatingsView.swift */; };
 		DC9BB3FE2B0FB6C70049BF09 /* SizesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9BB3FD2B0FB6C70049BF09 /* SizesView.swift */; };
 		DC9BB4022B0FB7790049BF09 /* DetailsReviewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9BB4012B0FB7790049BF09 /* DetailsReviewsView.swift */; };
+		DC9BB4042B0FBC340049BF09 /* DetailsQtyAndFavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9BB4032B0FBC340049BF09 /* DetailsQtyAndFavView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,10 +111,10 @@
 		DC9BB3F12B0FA9D70049BF09 /* NavigationOffsetModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationOffsetModifier.swift; sourceTree = "<group>"; };
 		DC9BB3F32B0FABE30049BF09 /* DetailsBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsBannerView.swift; sourceTree = "<group>"; };
 		DC9BB3F72B0FB3490049BF09 /* RadiusShapeUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadiusShapeUtil.swift; sourceTree = "<group>"; };
-		DC9BB3F92B0FB53E0049BF09 /* DetailsDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsDescriptionView.swift; sourceTree = "<group>"; };
 		DC9BB3FB2B0FB6A70049BF09 /* RatingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingsView.swift; sourceTree = "<group>"; };
 		DC9BB3FD2B0FB6C70049BF09 /* SizesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizesView.swift; sourceTree = "<group>"; };
 		DC9BB4012B0FB7790049BF09 /* DetailsReviewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsReviewsView.swift; sourceTree = "<group>"; };
+		DC9BB4032B0FBC340049BF09 /* DetailsQtyAndFavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsQtyAndFavView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -320,8 +320,8 @@
 		DC9BB3E32B0F93130049BF09 /* Details */ = {
 			isa = PBXGroup;
 			children = (
+				DC9BB4032B0FBC340049BF09 /* DetailsQtyAndFavView.swift */,
 				DC9BB4012B0FB7790049BF09 /* DetailsReviewsView.swift */,
-				DC9BB3F92B0FB53E0049BF09 /* DetailsDescriptionView.swift */,
 				DC9BB3F32B0FABE30049BF09 /* DetailsBannerView.swift */,
 				DC9BB3E82B0FA6170049BF09 /* DetailsNavigationView.swift */,
 				DC9BB3E42B0F93270049BF09 /* DetailsScreen.swift */,
@@ -490,6 +490,7 @@
 				DC8F7D252B0E66C300C13426 /* CategoryModel.swift in Sources */,
 				DC9BB3EB2B0FA64E0049BF09 /* HomeNavigationView.swift in Sources */,
 				DC9BB3F42B0FABE30049BF09 /* DetailsBannerView.swift in Sources */,
+				DC9BB4042B0FBC340049BF09 /* DetailsQtyAndFavView.swift in Sources */,
 				DC6ADF732B0E4808002C4054 /* TestData.swift in Sources */,
 				DC6ADF5E2B0E3EFD002C4054 /* HomeScreen.swift in Sources */,
 				DC8F7D232B0E669C00C13426 /* CategoryView.swift in Sources */,
@@ -509,7 +510,6 @@
 				DC9BB3F82B0FB3490049BF09 /* RadiusShapeUtil.swift in Sources */,
 				DC8F7D292B0E6CB500C13426 /* SectionHeaderView.swift in Sources */,
 				DC9BB3DB2B0F7F6B0049BF09 /* ProductView.swift in Sources */,
-				DC9BB3FA2B0FB53E0049BF09 /* DetailsDescriptionView.swift in Sources */,
 				DC6ADF752B0E48E2002C4054 /* ConstantsUtil.swift in Sources */,
 				DC9BB3D92B0F7E6B0049BF09 /* ProductModel.swift in Sources */,
 				DC6ADF5A2B0E3B9C002C4054 /* ImageExtension.swift in Sources */,
