@@ -12,12 +12,7 @@ struct DetailsDescriptionView: View {
     var body: some View {
 		ScrollView(content: {
 			Text(TestProduct.description)
-				.font(
-					.system(
-						.body,
-						design: .rounded
-					)
-				)
+				.font(.body)
 				.foregroundColor(.gray)
 				.multilineTextAlignment(.leading)
 		}).padding(

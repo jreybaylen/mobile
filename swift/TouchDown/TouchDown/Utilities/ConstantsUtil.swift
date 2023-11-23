@@ -14,6 +14,13 @@ struct Constants {
 	static let CATEGORIES: [ Category ] = Bundle.main.decode("categories.json")
 	
 	static let PRODUCTS: [ Product ] = Bundle.main.decode("products.json")
+	static let PRODUCT_SIZES: [ String ] = [
+		"XS",
+		"S",
+		"M",
+		"L",
+		"XL"
+	]
 	
 	static let BRANDS: [ Brand ] = Bundle.main.decode("brands.json")
 	

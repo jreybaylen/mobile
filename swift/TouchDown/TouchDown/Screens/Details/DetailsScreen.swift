@@ -18,6 +18,8 @@ struct DetailsScreen: View {
 				
 				DetailsBannerView()
 				
+				DetailsReviewsView()
+				
 				DetailsDescriptionView()
 			}
 		).zIndex(0)
