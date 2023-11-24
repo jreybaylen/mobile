@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ProductsView: View {
 	
+	@EnvironmentObject var shop: Shop
+	
     var body: some View {
 		HeadingView(title: "Helmets")
 		
@@ -23,6 +25,9 @@ struct ProductsView: View {
 						product in
 						
 						ProductView(product: product)
+							.onTapGesture(perform: {
+								shop.add(product)
+							})
 					}
 				)
 			}
@@ -36,4 +41,5 @@ struct ProductsView: View {
 
 #Preview {
     ProductsView()
+		.environmentObject(Shop())
 }

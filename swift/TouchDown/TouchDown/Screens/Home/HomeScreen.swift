@@ -9,38 +9,45 @@ import SwiftUI
 
 struct HomeScreen: View {
 	
+	@EnvironmentObject var shop: Shop
+	
 	var body: some View {
-		ZStack(content: {
-			VStack(
-				spacing: 0,
-				content: {
-					HomeNavigationView()
-					
-					ScrollView(
-						.vertical,
-						showsIndicators: false,
-						content: {
-							PlayersView()
-							
-							CategoriesView()
-							
-							ProductsView()
-							
-							BrandsView()
-							
-							FooterView()
-						}
-					)
-				}
-			).background(
-				Color
-					.appBackground
-					.ignoresSafeArea()
-			)
-		}).ignoresSafeArea()
+		if shop.product == nil {
+			ZStack(content: {
+				VStack(
+					spacing: 0,
+					content: {
+						HomeNavigationView()
+						
+						ScrollView(
+							.vertical,
+							showsIndicators: false,
+							content: {
+								PlayersView()
+								
+								CategoriesView()
+								
+								ProductsView()
+								
+								BrandsView()
+								
+								FooterView()
+							}
+						)
+					}
+				).background(
+					Color
+						.appBackground
+						.ignoresSafeArea()
+				)
+			}).ignoresSafeArea()
+		} else {
+			DetailsScreen()
+		}
 	}
 }
 
 #Preview {
     HomeScreen()
+		.environmentObject(Shop())
 }

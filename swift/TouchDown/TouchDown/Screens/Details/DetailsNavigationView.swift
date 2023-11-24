@@ -9,11 +9,16 @@ import SwiftUI
 
 struct DetailsNavigationView: View {
 	
+	@EnvironmentObject var shop: Shop
+	
     var body: some View {
 		HStack(content: {
 			Image(systemName: "chevron.left")
 				.font(.title)
 				.foregroundColor(.white)
+				.onTapGesture(perform: {
+					shop.clear()
+				})
 			
 			Spacer()
 			
@@ -30,5 +35,6 @@ struct DetailsNavigationView: View {
 		Color.black.ignoresSafeArea()
 		
 		DetailsNavigationView()
+			.environmentObject(Shop())
 	})
 }

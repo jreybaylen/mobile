@@ -9,6 +9,8 @@ import SwiftUI
 
 struct DetailsScreen: View {
 	
+	@EnvironmentObject var shop: Shop
+	
     var body: some View {
 		VStack(
 			alignment: .leading,
@@ -25,7 +27,7 @@ struct DetailsScreen: View {
 						.vertical,
 						showsIndicators: false,
 						content: {
-							Text(TestProduct.description)
+							Text(shop.product?.description ?? TestProduct.description)
 								.font(.body)
 								.foregroundColor(.gray)
 								.multilineTextAlignment(.leading)
@@ -51,12 +53,12 @@ struct DetailsScreen: View {
 					).padding(16)
 						.background(
 							Color(
-								red: TestProduct.red,
-								green: TestProduct.green,
-								blue: TestProduct.blue
+								red: shop.product?.red ?? TestProduct.red,
+								green: shop.product?.green ?? TestProduct.green,
+								blue: shop.product?.blue ?? TestProduct.blue
 							)
 						)
-						.clipShape(Capsule())
+						.clipShape(RoundedRectangle(cornerRadius: Constants.BORDER_RADIUS))
 						.padding(
 							.bottom,
 							30
@@ -79,9 +81,9 @@ struct DetailsScreen: View {
 			.ignoresSafeArea()
 			.background(
 				Color(
-					red: TestProduct.red,
-					green: TestProduct.green,
-					blue: TestProduct.blue
+					red: shop.product?.red ?? TestProduct.red,
+					green: shop.product?.green ?? TestProduct.green,
+					blue: shop.product?.blue ?? TestProduct.blue
 				).ignoresSafeArea()
 			)
     }
@@ -90,4 +92,5 @@ struct DetailsScreen: View {
 
 #Preview {
 	DetailsScreen()
+		.environmentObject(Shop())
 }

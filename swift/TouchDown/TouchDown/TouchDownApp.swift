@@ -13,6 +13,7 @@ struct TouchDownApp: App {
     var body: some Scene {
         WindowGroup {
             MainScreen()
+				.environmentObject(Shop())
         }
     }
 	

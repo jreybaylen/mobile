@@ -9,6 +9,7 @@ import SwiftUI
 
 struct DetailsBannerView: View {
 	
+	@EnvironmentObject var shop: Shop
 	@State private var isAnimating = false
 	
     var body: some View {
@@ -21,7 +22,7 @@ struct DetailsBannerView: View {
 					content: {
 						Text("Protective Gear")
 					
-						Text(TestProduct.name)
+						Text(shop.product?.name ?? TestProduct.name)
 							.font(.largeTitle)
 							.fontWeight(.black)
 					}
@@ -42,7 +43,7 @@ struct DetailsBannerView: View {
 								Text("Price")
 									.fontWeight(.semibold)
 								
-								Text(TestProduct.formattedPrice)
+								Text(shop.product?.formattedPrice ?? TestProduct.formattedPrice)
 									.font(.largeTitle)
 									.fontWeight(.black)
 									.scaleEffect(
@@ -54,7 +55,7 @@ struct DetailsBannerView: View {
 						
 						Spacer()
 						
-						Image(TestProduct.image)
+						Image(shop.product?.image ?? TestProduct.image)
 							.fitScreen()
 							.offset(y: isAnimating ? 0 : -35)
 					}
@@ -82,5 +83,6 @@ struct DetailsBannerView: View {
 		).ignoresSafeArea()
 		
 		DetailsBannerView()
+			.environmentObject(Shop())
 	})
 }
